@@ -1,0 +1,5 @@
+<aura:event type="COMPONENT" description="Contains filtered Cases" >
+  <aura:attribute name="hcpId" type="String"/>
+  <aura:attribute name="purpose" type="String"/>
+  <aura:attribute name="priority" type="String"/>
+</aura:event>

@@ -1,0 +1,29 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes" access="global" >
+
+
+    <aura:attribute name="recordError" type="String" />
+    <aura:attribute name="caseRecord" type="Case" />
+    <aura:attribute name="caseFields" type="Case"  />
+    
+    
+    <div class="slds-page-header" role="banner">
+        <p class="slds-text-heading_label">Create Service Request</p>
+    </div>
+    
+    <force:recordData aura:id="service"
+        fields="Id,CM_SupportArea__c,CM_ServiceModule__c,CM_OperationalFunction__c"
+        mode="EDIT"
+        recordId="5000E000006PCVXQA4"              
+        targetError="{!v.recordError}"
+        targetRecord="{!v.caseRecord}"
+        targetFields="{!v.caseFields}"/>
+
+    <lightning:card iconName="standard:account" title="recordData technic"  >
+        {!v.caseRecord.Id}<br />
+            	{!v.caseFields.Id}<br />
+            	<lightning:input label="Account Name" value="{!v.caseFields.Id}" />
+            	<lightning:input label="CM_SupportArea__c" value="{!v.caseFields.CM_SupportArea__c}" />
+            	<lightning:input label="CM_ServiceModule__c" value="{!v.caseFields.CM_ServiceModule__c}" />
+    </lightning:card>
+
+</aura:component>

@@ -1,0 +1,88 @@
+<aura:component controller="CCL_PRFController" 
+                implements="force:hasRecordId,force:hasSObjectName" >
+    
+    <aura:attribute name="recordId"      				 	type="Id"  required="true"/>
+    <aura:attribute name="selectedPurposeId"       		type="Id"  required="true"/>
+    <aura:attribute name="selectedWizardName"       	type="String"  required="true"/>
+    <aura:attribute name="selectedSiteId"       			type="Id"  required="true"/>
+    <aura:attribute name="selectedTeamId"       			type="Id"  required="true"/>
+    <aura:attribute name="selectedHCPId"       				type="Id"  required="true"/>
+    <aura:attribute name="selectedApheresisCenterId"  type="Id"  required="true"/>
+    <aura:attribute name="selectedPickUpLocationId"   type="Id"  required="true"/>
+    <aura:attribute name="selectedInfusionCenterId"   type="Id"  required="true"/>
+		<aura:attribute name="selectedShipToLocationId"   type="Id"  required="true"/>
+		
+		<aura:attribute name="listWizardSteps" 						type="CCL_WizardStep__mdt[]" />
+		<aura:attribute name="dynamicFieldSetMap" 				type="Map" access="private" />
+    <aura:attribute name="cryobags" 									type="AppointmentLineItem__c[]"/>
+
+		<!-- Events-->
+		<aura:registerEvent name="navigationEvent" type="c:CCL_PRF_NavigationEvent"/>
+
+		<!-- Purpose and Wizard -->
+		<lightning:layoutItem size="12" flexibility="auto" padding="around-small">
+			<h3 class="slds-section-title_divider slds-has-divider_bottom">Purpose Information</h3>
+			<c:CCL_PRF_PurposeSelector 
+					reviewMode="true" 
+					recordId="{!v.recordId}"
+					selectedPurposeId="{!v.selectedPurposeId}"
+					selectedWizardName="{!v.selectedWizardName}"/>
+		</lightning:layoutItem>
+
+		<aura:iteration items="{!v.listWizardSteps}" var="step">
+			<!-- PRF Start-->
+			<aura:if isTrue="{!step.Component__c == 'PRF_START'}">
+					<lightning:layoutItem size="12" flexibility="auto" padding="around-small">
+						<h3 class="slds-section-title_divider slds-has-divider_bottom">Site information</h3>
+						<c:CCL_PRF_SiteTeamHCP reviewMode="true" 
+								recordId="{!v.recordId}"
+								selectedPurposeId="{!v.selectedPurposeId}"
+								selectedSiteId="{!v.selectedSiteId}"
+								selectedTeamId="{!v.selectedTeamId}"
+								selectedHCPId="{!v.selectedHCPId}"/>
+					</lightning:layoutItem>
+			</aura:if>
+			<aura:if isTrue="{!step.Component__c == 'Wizard_Fieldset'}">
+				<lightning:layoutItem size="12" flexibility="auto" padding="around-small">
+						<h3 class="slds-section-title_divider slds-has-divider_bottom">{!step.Label}</h3>
+
+						<c:CCL_DynamicFieldset 
+										aura:id="dynamicFieldSetCmp" 
+										recordId="{!v.recordId}" 
+										sObjectName="{!step.ObjectType__c}" 
+										fieldSetName="{!step.FieldSet__c}"
+										reviewMode="true"/>
+
+					</lightning:layoutItem>
+			</aura:if>
+			<aura:if isTrue="{!step.Component__c == 'PRF_Logistics'}">
+					<lightning:layoutItem size="12" flexibility="auto" padding="around-small">
+							<h3 class="slds-section-title_divider slds-has-divider_bottom">Logistics Information</h3>
+							<c:CCL_PRF_Logistics reviewMode="true" 
+									selectedPurposeId="{!v.selectedPurposeId}" 
+									selectedSiteId="{!v.selectedSiteId}"
+									recordId="{!v.recordId}"
+									selectedApheresisCenterId="{!v.selectedApheresisCenterId}"
+									selectedPickUpLocationId="{!v.selectedPickUpLocationId}"
+									selectedInfusionCenterId="{!v.selectedInfusionCenterId}"
+									selectedShipToLocationId="{!v.selectedShipToLocationId}"/>
+						</lightning:layoutItem>
+			</aura:if>
+
+			<!-- ADF Cryobags
+			-->
+			<aura:if isTrue="{!step.Component__c == 'ADF_Cryobags'}">
+					<lightning:layoutItem size="12" flexibility="auto" padding="around-small">
+							<h3 class="slds-section-title_divider slds-has-divider_bottom">ADF Cryobags</h3>
+							<c:CCL_Cryobags reviewMode="true" 
+									recordId="{!v.recordId}"
+									cryobags="{!v.cryobags}"/>
+						</lightning:layoutItem>
+			</aura:if>
+		</aura:iteration>
+
+	<lightning:layoutItem size="12" flexibility="auto" padding="around-small">
+		<lightning:button class="slds-m-top_small" variant="destructive" label="Previous" onclick="{!c.clickPrevious}"/>
+		<lightning:button class="slds-m-top_small" type="submit" label="Submit for review" onclick="{!c.submit}"/>
+	</lightning:layoutItem>						
+</aura:component>	

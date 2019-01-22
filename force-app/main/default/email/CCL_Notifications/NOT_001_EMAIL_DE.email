@@ -1,0 +1,4 @@
+Neuer Product Request wurde zur Genehmigung eingereicht. 
+Group Batch Nummer: {!Case.GroupBatchNumber__c}
+
+Zur Überprüfung bitte hier klicken __URL__.

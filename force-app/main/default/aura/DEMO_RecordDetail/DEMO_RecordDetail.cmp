@@ -1,0 +1,46 @@
+<aura:component controller="DashboardController" implements="force:lightningQuickAction,force:hasRecordId,forceCommunity:availableForAllPageTypes,flexipage:availableForAllPageTypes" access="global">
+  <aura:attribute name="Case" type="Object"/>
+  <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+  <div class="slds-box slds-box_small slds-grid slds-wrap">
+    <div class="slds-size_1-of-1 slds-text-heading_medium">
+      Treatment Details
+    </div>
+    <div class="slds-size_1-of-1 slds-border_bottom slds-p-around_small">
+      <p class="slds-text-body_regular blue">Subject</p>
+      <p class="slds-text-heading_small">{!v.Case.Subject}</p>
+    </div>
+    <div class="slds-size_1-of-1 slds-border_bottom slds-p-around_small">
+      <p class="slds-text-body_regular blue">Account</p>
+      <p class="slds-text-heading_small">{!v.Case.Account.Name}</p>
+    </div>
+    <div class="slds-size_1-of-1 slds-border_bottom slds-p-around_small">
+      <p class="slds-text-body_regular blue">Patient</p>
+      <p class="slds-text-heading_small">{!v.Case.Patient__r.Name}</p>
+    </div>
+    <div class="slds-size_1-of-1 slds-border_bottom slds-p-around_small">
+      <p class="slds-text-body_regular blue">Purpose</p>
+      <p class="slds-text-heading_small">{!v.Case.Purpose__r.Name}</p>
+    </div>
+    <div class="slds-size_1-of-1 slds-border_bottom slds-p-around_small">
+      <p class="slds-text-body_regular blue">Priority</p>
+      <p class="slds-text-heading_small">{!v.Case.Priority}</p>
+    </div>
+    <div class="slds-size_1-of-1 slds-border_bottom slds-p-around_small">
+      <p class="slds-text-body_regular blue">Product Request Status</p>
+      <p class="slds-text-heading_small">{!v.Case.PRF_Status__c}</p>
+    </div>
+    <div class="{!v.Case.PRFSubmittedDate__c != null ? 'slds-size_1-of-1 slds-border_bottom slds-p-around_small' : 'slds-size_1-of-1 slds-border_bottom slds-p-around_small slds-hide'}">
+      <p class="slds-text-body_regular blue">Product Request Created Date</p>
+      <p class="slds-text-heading_small"><lightning:formattedDateTime value="{!v.Case.PRFSubmittedDate__c}" /></p>
+    </div>
+    <div class="{!v.Case.PRFApprovedDate__c != null ? 'slds-size_1-of-1 slds-border_bottom slds-p-around_small' : 'slds-size_1-of-1 slds-border_bottom slds-p-around_small slds-hide'}">
+      <p class="slds-text-body_regular blue">Product Request Approved Date</p>
+      <p class="slds-text-heading_small"><lightning:formattedDateTime value="{!v.Case.PRFApprovedDate__c}" /></p>
+    </div>
+    <div class="slds-size_1-of-1 slds-p-around_small">
+      <p class="slds-text-body_regular blue">ADF Status</p>
+      <p class="slds-text-heading_small">{!v.Case.ADF_Status__c}</p>
+    </div>
+  </div>
+</aura:component>

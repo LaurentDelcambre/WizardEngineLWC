@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Role__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Role the account is fulfilling on the case</inlineHelpText>
+    <label>Role</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>PATIENT</fullName>
+                <default>false</default>
+                <label>Patient</label>
+            </value>
+            <value>
+                <fullName>SITE</fullName>
+                <default>false</default>
+                <label>Site</label>
+            </value>
+            <value>
+                <fullName>TEAM</fullName>
+                <default>false</default>
+                <label>Team</label>
+            </value>
+            <value>
+                <fullName>APH</fullName>
+                <default>false</default>
+                <label>Apheresis</label>
+            </value>
+            <value>
+                <fullName>PICK</fullName>
+                <default>false</default>
+                <label>Pick Up</label>
+            </value>
+            <value>
+                <fullName>PLANT</fullName>
+                <default>false</default>
+                <label>Plant</label>
+            </value>
+            <value>
+                <fullName>REL</fullName>
+                <default>false</default>
+                <label>Release Hub</label>
+            </value>
+            <value>
+                <fullName>SHIP</fullName>
+                <default>false</default>
+                <label>Delivery</label>
+            </value>
+            <value>
+                <fullName>INF</fullName>
+                <default>false</default>
+                <label>INF</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

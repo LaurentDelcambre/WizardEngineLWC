@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status_Apheresis_Pickup__c</fullName>
+    <externalId>false</externalId>
+    <label>Status - Apheresis Pickup</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Apheresis - Waiting Confirmation</fullName>
+                <default>true</default>
+                <label>Apheresis - Waiting Confirmation</label>
+            </value>
+            <value>
+                <fullName>Apheresis - Planned Pickup</fullName>
+                <default>false</default>
+                <label>Apheresis - Planned Pickup</label>
+            </value>
+            <value>
+                <fullName>Apheresis Material - Goods Received</fullName>
+                <default>false</default>
+                <label>Apheresis Material - Goods Received</label>
+            </value>
+            <value>
+                <fullName>Apheresis Material - Goods Receipt Reversed</fullName>
+                <default>false</default>
+                <label>Apheresis Material - Goods Receipt Reversed</label>
+            </value>
+            <value>
+                <fullName>Apheresis - Picked up</fullName>
+                <default>false</default>
+                <label>Apheresis - Picked up</label>
+            </value>
+            <value>
+                <fullName>Apheresis - Pickup Cancelled</fullName>
+                <default>false</default>
+                <label>Apheresis - Pickup Cancelled</label>
+            </value>
+            <value>
+                <fullName>Apheresis - Batch Released</fullName>
+                <default>false</default>
+                <label>Apheresis - Batch Released</label>
+            </value>
+            <value>
+                <fullName>Apheresis - Batch Release Reversed</fullName>
+                <default>false</default>
+                <label>Apheresis - Batch Release Reversed</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

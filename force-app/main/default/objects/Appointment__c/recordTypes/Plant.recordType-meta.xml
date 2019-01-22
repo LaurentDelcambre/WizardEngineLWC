@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Plant</fullName>
+    <active>true</active>
+    <description>Plant Appointment for processing the patients blood (Cell Processing)</description>
+    <label>Plant Appointment</label>
+    <picklistValues>
+        <picklist>Status_Apheresis_Pickup__c</picklist>
+        <values>
+            <fullName>Apheresis - Batch Release Reversed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Apheresis - Batch Released</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Apheresis - Picked up</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Apheresis - Pickup Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Apheresis - Planned Pickup</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Apheresis - Waiting Confirmation</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Apheresis Material - Goods Receipt Reversed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Apheresis Material - Goods Received</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status_Apheresis_Procedure__c</picklist>
+        <values>
+            <fullName>Apheresis - Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Apheresis - Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Apheresis - Interrupted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Apheresis - To be confirmed</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status_Cell_Processing__c</picklist>
+        <values>
+            <fullName>Cell Processing - Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cell Processing - Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cell Processing - Completion Reversed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cell Processing - Planned</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cell Processing - Start Reversed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cell Processing - Started</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cell Processing - Waiting Confirmation</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Primary Product - QA Release Reversed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Primary Product - QA Released</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status_Finished_Product_Delivery__c</picklist>
+        <values>
+            <fullName>Finished Product - Received</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Finished Product - Released by Novartis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Finished Product - Released by Novartis Reversed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Finished Product - Released from Manufacturing Plant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Finished Product - Released from Manufacturing Plant Reversed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Finished Product - Shipped from Manufacturing Plant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Finished Product - Shipped from Manufacturing Plant Reversed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Finished Product - Shipped to Treatment Center</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Finished Product - Shipped to Treatment Center Reversed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Finished Product Delivery - Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Finished Product Delivery - Planned</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Finished Product Delivery - Waiting Confirmation</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status_Overall_Infusion__c</picklist>
+        <values>
+            <fullName>Infusion - Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Infusion - Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Infusion - In Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Infusion - Interrupted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Infusion - Not Started</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status_Overall_Treatment__c</picklist>
+        <values>
+            <fullName>Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Progress</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status_Plant_Appointment__c</picklist>
+        <values>
+            <fullName>Allocated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Allocated - Waiting Confirmation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Open</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reserved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reserved - Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reserved - Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reserved - Waiting Confirmation</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

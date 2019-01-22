@@ -1,0 +1,4 @@
+Product Request has been submitted for approval.
+Group Batch Number: {!Case.GroupBatchNumber__c}
+
+Click here__URL__ to approve

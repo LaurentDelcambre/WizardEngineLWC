@@ -1,0 +1,15 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "Account",
+                "referenceId": "AccountRef7"
+            },
+            "CertifiedSite__c": false,
+            "ISBTCompliant__c": false,
+            "Name": "Team - MDA -Children 2",
+            "ParentId": "@AccountRef1",
+            "RecordTypeId": "0124E000000GxnlQAC"
+        }
+    ]
+}

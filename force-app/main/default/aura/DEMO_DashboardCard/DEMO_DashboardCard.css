@@ -1,0 +1,40 @@
+.THIS .pathElementBeginning{
+  clip-path: polygon(93% 0%, 100% 50%, 93% 100%, 0% 100%, 0% 50%, 0 0);
+  height: 100px;
+}
+
+.THIS .pathElement{
+  clip-path: polygon(93% 0%, 100% 50%, 93% 100%, 0% 100%, 7% 50%, 0 0);
+  height: 100px;
+}
+
+.THIS .inProgress {
+  background-color: #d7edfe;
+  color: #0f61a7;
+}
+
+.THIS .completed {
+  background-color: #0f61a7;
+  color: #ffffff;
+}
+
+.THIS .notStarted {
+  background-color: #F0F0F0;
+  color: #777777;
+}
+
+.THIS .requestStatus {
+  height: 45px;
+  margin-right: -32px;
+  text-align: center;
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.1), 0 9px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.THIS .link:hover {
+  text-decoration: underline;
+  color:#0f61a7;
+}
+
+.THIS .pointer {
+  cursor: pointer;
+}

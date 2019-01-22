@@ -1,0 +1,94 @@
+<template>
+    <div class="c-container">
+		<lightning:card iconName="standard:account" title="Product Request Form" >
+			<lightning:layout multipleRows="true">
+
+                <!-- Progress Bar-->
+                <template if:true={isProgressBarDisplayed}>
+                    <lightning:layoutItem size="12" flexibility="auto" padding="around-small">
+						<!-- TODO-->
+					</lightning:layoutItem>
+                </template>
+
+				<!-- Placeholder for the Section Description -->
+				<lightning:layoutItem size="12" flexibility="auto" padding="around-small">
+					<div class="slds-summary-detail__content">{sectionDescription}</div>
+				</lightning:layoutItem>
+
+				<!-- Purpose Selector-->
+				<template if:true={isPurposeCmpDisplayed}>
+					<c:CCL_PRF_PurposeSelector reviewMode="false"
+						selectedPurposeId="{!v.selectedPurposeId}"
+						selectedWizardName="{!v.selectedWizardName}"/>
+				</template>
+
+				<!-- PRF Step 1: Site, Team, HCP-->
+				<template if:true={isSiteCmpDisplayed}>
+					<c:CCL_PRF_SiteTeamHCP reviewMode="false"
+						selectedPurposeId="{!v.selectedPurposeId}"
+						selectedWizardName="{!v.selectedWizardName}"
+						selectedSiteId="{!v.selectedSiteId}"
+						selectedTeamId="{!v.selectedTeamId}"
+						selectedHCPId="{!v.selectedHCPId}"/>
+				</template>
+
+				<!-- OLD
+				<template if:true={isPatientCmpDisplayed}>
+						recordId={!v.recordId}
+					<aura:iteration items="{!v.patientFieldSets}" var="fieldsetName" indexVar="patientIndex">
+						<template if:true={patientIndex == v.currentPatientIndex}">
+							<c:CCL_DynamicFieldset aura:id="dyna" recordId="{!v.recordId}"
+													sObjectName="PRF__c"
+													fieldSetName="{!fieldsetName}" />
+						</template>
+					</aura:iteration>
+				</template>
+				-->
+
+				<!-- Placeholder for Dynamic Field Set: Start by being hidden-->
+				<div aura:id="patientContainer" class="hidden">
+							{!v.dynamicFieldSetCmp}
+				</div>
+
+				<!-- Logistics Component-->
+				<template if:true={isLogisticsDisplayed}>
+					<c:CCL_PRF_Logistics aura:id="logisticstCmp"
+						reviewMode="false"
+						selectedPurposeId="{!v.selectedPurposeId}"
+						selectedSiteId="{!v.selectedSiteId}"
+						recordId="{!v.recordId}"
+						selectedApheresisCenterId="{!v.selectedApheresisCenterId}"
+						selectedPickUpLocationId="{!v.selectedPickUpLocationId}"
+						selectedInfusionCenterId="{!v.selectedInfusionCenterId}"
+						selectedShipToLocationId="{!v.selectedShipToLocationId}"/>
+				</template>
+
+				<!-- Review adn Submit component-->
+				<template if:true=.isReviewSubmitDisplayed}>
+					<c:CCL_PRF_ReviewSubmit aura:id="reviewSubmitCmp"
+						recordId="{!v.recordId}"
+						selectedWizardName="{!v.selectedWizardName}"
+						selectedPurposeId="{!v.selectedPurposeId}"
+						selectedSiteId="{!v.selectedSiteId}"
+						selectedTeamId="{!v.selectedTeamId}"
+						selectedHCPId="{!v.selectedHCPId}"
+						selectedApheresisCenterId="{!v.selectedApheresisCenterId}"
+						selectedPickUpLocationId="{!v.selectedPickUpLocationId}"
+						selectedInfusionCenterId="{!v.selectedInfusionCenterId}"
+						selectedShipToLocationId="{!v.selectedShipToLocationId}"
+						listWizardSteps="{!v.listWizardSteps}"
+						cryobags="{!v.cryobags}"/>
+				</template>
+
+				<!-- Cryobags component -->
+				<template if:true={isCryobagsDisplayed}>
+					<c:CCL_Cryobags recordId="{!v.recordId}"/>
+				</template>
+
+				<template if:true={isLoading}>
+					<lightning-spinner alternative-text="Loading" />
+				</template>
+      </lightning:layout>
+		</lightning:card>
+  </div>
+</template>

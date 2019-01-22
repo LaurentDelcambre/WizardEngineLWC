@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status_Cell_Processing__c</fullName>
+    <externalId>false</externalId>
+    <label>Status - Cell Processing</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Cell Processing - Waiting Confirmation</fullName>
+                <default>true</default>
+                <label>Cell Processing - Waiting Confirmation</label>
+            </value>
+            <value>
+                <fullName>Cell Processing - Planned</fullName>
+                <default>false</default>
+                <label>Cell Processing - Planned</label>
+            </value>
+            <value>
+                <fullName>Cell Processing - Started</fullName>
+                <default>false</default>
+                <label>Cell Processing - Started</label>
+            </value>
+            <value>
+                <fullName>Cell Processing - Start Reversed</fullName>
+                <default>false</default>
+                <label>Cell Processing - Start Reversed</label>
+            </value>
+            <value>
+                <fullName>Cell Processing - Completed</fullName>
+                <default>false</default>
+                <label>Cell Processing - Completed</label>
+            </value>
+            <value>
+                <fullName>Cell Processing - Completion Reversed</fullName>
+                <default>false</default>
+                <label>Cell Processing - Completion Reversed</label>
+            </value>
+            <value>
+                <fullName>Primary Product - QA Released</fullName>
+                <default>false</default>
+                <label>Primary Product - QA Released</label>
+            </value>
+            <value>
+                <fullName>Primary Product - QA Release Reversed</fullName>
+                <default>false</default>
+                <label>Primary Product - QA Release Reversed</label>
+            </value>
+            <value>
+                <fullName>Cell Processing - Cancelled</fullName>
+                <default>false</default>
+                <label>Cell Processing - Cancelled</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

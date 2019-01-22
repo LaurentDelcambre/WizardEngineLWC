@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Treatment</fullName>
+    <active>true</active>
+    <businessProcess>Treatment</businessProcess>
+    <compactLayoutAssignment>NewDefault</compactLayoutAssignment>
+    <description>Used for the regular Treatments / holding the core PRF information</description>
+    <label>Treatment</label>
+    <picklistValues>
+        <picklist>ADF_Status__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Draft</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Submitted</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CM_OperationalFunction__c</picklist>
+        <values>
+            <fullName>A1%2E Capture Site Certification Data %28Site Set-Up%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A1%2E Conduct Benefits Investigation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A1%2E Respond to New Certification Inquiries</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A1%2E Respond to Post-Certification Inquiries</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A2%2E Assist with PA %26 Appeals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A2%2E Respond to User Registration Inquiries</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A2%2E Triage Site%2FHCP Certification Data</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A3%2E Confirm Certified Site Set-Up</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A3%2E Provide Billing and Claims Support</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A3%2E Provide Certification Training Materials</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A4%2E Update Site Certification Data %28Ongoing Management%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>B1%2E Conduct Network Investigation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>B1%2E Provide Certified Site Information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>B1%2E Receive Product Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>B1%2E Respond to Lead-Time Inquiries</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>B2%2E Offer Referring HCP Guide</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>B2%2E Reserve an Allocated Plant Appointment %28PA%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>B2%2E Respond to Order Process Inquiries</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>B3%2E Associate Patient with Allocated PA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>B3%2E Respond to System%2FPlatform Related Issues</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>B4%2E Facilitate Second-Person Product Request Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>B4%2E Respond to Aph%2FCryo Logistics %26 Transportation Inquiries</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>B5%2E Forward Product Ordering Data</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>B5%2E Respond to Return%2FCancellation Inquiries</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>C1%2E Offer Patient Resource Materials</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>C1%2E Respond to Aph PO Related Inquiries</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>C1%2E Respond to Aph%2FCryo Product Inquiries</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>C1%2E Respond to Treated-Patient Inquiries</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>C2%2E Communicate Aph Transportation Status</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>C2%2E Respond to Patient Treatment Related Inquiries</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>C3%2E Respond to Kymriah Related Inquiries</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>C4%2E Triage to Expert Advisory Board</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>C5%2E Respond to Inquiries on REMS program</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>D1%2E Communicate Order Status%2FBatch ID</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>D1%2E Provide Copay Assistance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>D2%2E Communicate Kymriah Transportation Status</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>D2%2E Facilitate Free Goods Process</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>E1%2E Arrange Travel Assistance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>E1%2E Communicate Rescheduling Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>E2%2E Receive Cancellation Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>E3%2E Triage Cancellation Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>E4%2E Receive Finished Product Return Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>E5%2E Triage Finished Product Return Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>E6%2E Communicate Replacement Product Delivery Request</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CM_ServiceModule__c</picklist>
+        <values>
+            <fullName>Aph Tracking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cell Processing Surveillance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certification Follow-Up%2FFAQ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certified Site %26 HCP Information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Coverage Approval Support</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Education%2FInfo Resources</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Financial Support</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General Order Process Queries</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Long-Term Patient Follow-Up</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medical Information Support</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Network Investigation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non-Certified Site%2FHCP Certification Inquiries</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Product Request Processing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Return%2C Cancellation %26 Rescheduling</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Site Data Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Travel Assistance</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CM_SupportArea__c</picklist>
+        <values>
+            <fullName>Certified Site %2F HCP Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Order Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Patient Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referring Site Services</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Origin</picklist>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PRF_Status__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Draft</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Submitted</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Priority</picklist>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medium</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reason</picklist>
+        <values>
+            <fullName>Complex functionality</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Existing problem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Instructions not clear</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New problem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>User didn%27t attend training</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status_Apheresis_Pickup__c</picklist>
+        <values>
+            <fullName>Apheresis - Batch Release Reversed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Apheresis - Batch Released</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Apheresis - Picked up</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Apheresis - Pickup Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Apheresis - Planned Pickup</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Apheresis - Waiting Confirmation</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Apheresis Material - Goods Receipt Reversed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Apheresis Material - Goods Received</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status_Apheresis_Procedure__c</picklist>
+        <values>
+            <fullName>Apheresis - Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Apheresis - Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Apheresis - Interrupted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Apheresis - To be confirmed</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status_Cell_Processing__c</picklist>
+        <values>
+            <fullName>Cell Processing - Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cell Processing - Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cell Processing - Completion Reversed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cell Processing - Planned</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cell Processing - Start Reversed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cell Processing - Started</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cell Processing - Waiting Confirmation</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status_Finished_Product_Delivery__c</picklist>
+        <values>
+            <fullName>Finished Product - Received</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Finished Product - Released from Manufacturing Plant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Finished Product - Released from Manufacturing Plant Reversed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Finished Product - Shipped from Manufacturing Plant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Finished Product - Shipped from Manufacturing Plant Reversed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Finished Product Delivery - Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Finished Product Delivery - Planned</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Finished Product Delivery - Waiting Confirmation</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status_Overall_Infusion__c</picklist>
+        <values>
+            <fullName>Infusion - Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Infusion - Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Infusion - In Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Infusion - Interrupted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Infusion - Not Started</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status_Overall_Treatment__c</picklist>
+        <values>
+            <fullName>Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Progress</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status_Plant_Appointment__c</picklist>
+        <values>
+            <fullName>Allocated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Allocated - Waiting Confirmation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Open</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reserved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reserved - Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reserved - Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reserved - Waiting Confirmation</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Feature Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Problem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Question</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

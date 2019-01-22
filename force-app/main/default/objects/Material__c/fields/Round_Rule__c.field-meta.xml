@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Round_Rule__c</fullName>
+    <description>Rounding Rule fed from SAP. The value currently being stored in this field will provide no added functionality for Cell Chain Link, but may be used in the future.</description>
+    <externalId>false</externalId>
+    <label>Round Rule</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>+</fullName>
+                <default>false</default>
+                <label>+</label>
+            </value>
+            <value>
+                <fullName>-</fullName>
+                <default>false</default>
+                <label>-</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

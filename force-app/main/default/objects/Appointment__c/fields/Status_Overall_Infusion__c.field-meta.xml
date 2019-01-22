@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status_Overall_Infusion__c</fullName>
+    <externalId>false</externalId>
+    <label>Status - Overall Infusion</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Infusion - Not Started</fullName>
+                <default>true</default>
+                <label>Infusion - Not Started</label>
+            </value>
+            <value>
+                <fullName>Infusion - In Progress</fullName>
+                <default>false</default>
+                <label>Infusion - In Progress</label>
+            </value>
+            <value>
+                <fullName>Infusion - Completed</fullName>
+                <default>false</default>
+                <label>Infusion - Completed</label>
+            </value>
+            <value>
+                <fullName>Infusion - Interrupted</fullName>
+                <default>false</default>
+                <label>Infusion - Interrupted</label>
+            </value>
+            <value>
+                <fullName>Infusion - Cancelled</fullName>
+                <default>false</default>
+                <label>Infusion - Cancelled</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

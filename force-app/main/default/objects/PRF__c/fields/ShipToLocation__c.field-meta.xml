@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ShipToLocation__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Selected ShipToLocation</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Selected ShipToLocation</inlineHelpText>
+    <label>ShipTo Location</label>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>PRFs (ShipTo Location)</relationshipLabel>
+    <relationshipName>PRFs6</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

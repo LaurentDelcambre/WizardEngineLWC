@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RoutingAccount__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Account grouping the different routing hubs together</inlineHelpText>
+    <label>Routing Account</label>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Plant Routing Hubs</relationshipLabel>
+    <relationshipName>PlantRoutingHubs</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

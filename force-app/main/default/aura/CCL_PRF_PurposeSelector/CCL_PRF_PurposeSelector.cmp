@@ -1,0 +1,65 @@
+<aura:component controller="CCL_PRFController" implements="force:appHostable,forceCommunity:availableForAllPageTypes" access="global">
+
+  <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+  <aura:registerEvent name="navigationEvent" type="c:CCL_PRF_NavigationEvent"/>
+  
+	<aura:attribute name="reviewMode" type="Boolean" default="false"/>
+
+	<aura:attribute name="purposesLabels" type="String[]" access="private"/>
+	
+	<aura:attribute name="recordId" type="Id" />
+	<aura:attribute name="purposes" type="List"/>
+	<aura:attribute name="selectedPurposeId" type="Id"/>
+	<aura:attribute name="wizards" type="List"/>
+	<aura:attribute name="selectedWizardName" type="String"/>
+    
+    <!-- Review mode -->
+    <aura:if isTrue="{!v.reviewMode}">
+			<lightning:recordViewForm recordId="{!v.recordId}" objectApiName="PRF__c">
+				<div class="slds-grid slds-wrap custom-container">
+					<div class="slds-p-horizontal_small slds-size_1-of-2">
+							<lightning:outputField fieldName="Purpose__c" />
+					</div>
+					<div class="slds-p-horizontal_small slds-size_1-of-2">
+							<lightning:outputField fieldName="Wizard__c" />
+					</div>
+				</div>
+			</lightning:recordViewForm>
+    </aura:if>
+
+    <!-- Edit mode -->
+    <aura:if isTrue="{!not(v.reviewMode)}">
+			<!-- Purpose -->
+			<lightning:layoutItem size="12">
+					<div class="slds-p-horizontal_small">
+							<p class="slds-text-heading_small">
+									<lightning:select aura:id="selectPurpose" name="selectedPurpose" label="{!v.purposesLabels[0]}" 
+											value="{!v.selectedPurposeId}" onchange="{!c.filterWizards}" required="true" messageWhenValueMissing="Please enter a Purpose" disabled="{!v.reviewMode}">
+											<option value="">Choose a Purpose</option>
+											<aura:iteration items="{!v.purposes}" var="purpose">
+													<option value="{!purpose.Id}" selected="{!purpose.Id == v.selectedPurposeId}">{!purpose.Name}</option>
+											</aura:iteration>
+									</lightning:select>
+							</p>
+					</div>
+			</lightning:layoutItem>
+			<!-- Wizards -->
+			<lightning:layoutItem size="12">
+					<div class="slds-p-horizontal_small">
+							<p class="slds-text-heading_small">
+									<lightning:select aura:id="selectWizard" name="selectWizard" label="Wizard"  
+										disabled="true" value="{!v.selectedWizardName}" required="true" messageWhenValueMissing="Please select a Wizard">
+											<option value="">Choose a Wizard</option>
+											<aura:iteration items="{!v.wizards}" var="wizard">
+													<option value="{!wizard}" selected="{!wizard == v.selectedWizardName}">{!wizard}</option>
+											</aura:iteration>
+									</lightning:select>
+							</p>
+					</div>
+			</lightning:layoutItem>
+
+			<lightning:layoutItem size="12" flexibility="auto" padding="around-small">
+					<lightning:button class="slds-m-top_small" type="submit" label="Next" onclick="{!c.clickNext}"/>
+			</lightning:layoutItem>
+		</aura:if>
+</aura:component>

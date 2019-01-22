@@ -1,0 +1,118 @@
+<aura:component controller="CCL_PRFController">
+    <aura:attribute name="cryobags" type="AppointmentLineItem__c[]"/>
+    <aura:attribute name="recordId" type="Id" />
+    <aura:attribute name="reviewMode" type="Boolean" default="false"/>
+    
+    <aura:handler name="init" value="{! this }" action="{! c.init }"/>
+    <aura:registerEvent name="navigationEvent" type="c:CCL_PRF_NavigationEvent"/>
+
+    
+    <aura:attribute name="partnerdata" type="Object" access="private" />
+    <aura:attribute name="partnercolumns" type="List" access="private" />
+    <!-- Review mode -->
+    <aura:if isTrue="{!v.reviewMode}">
+      <lightning:layoutItem size="12">
+
+        <table role="grid" tabindex="0" class="slds-table slds-table_header-fixed slds-table_bordered slds-table_edit slds-table_resizable-cols" style="table-layout: fixed; width: 1314px;">
+          <thead>
+            <tr class="slds-line-height_reset">
+              <th class="slds-text-title_caps" tabindex="-1" >
+                    DIN/APHERESIS ID
+              </th>
+              <th class="slds-text-title_caps" tabindex="-1" >
+                  Cryobag #
+              </th>
+              <th class="slds-text-title_caps" tabindex="-1" >
+                  Cryobag ID
+              </th>
+              <th class="slds-text-title_caps" tabindex="-1" >
+                  To Be Shipped
+              </th>
+              <th class="slds-text-title_caps" tabindex="-1" >
+                  Total Nucleated Cell Count
+              </th>
+              <th class="slds-text-title_caps" tabindex="-1" >
+                  UoM
+              </th>
+              <th class="slds-text-title_caps" tabindex="-1" >
+                  Total Volume per bag (ml)
+              </th>
+            </tr>
+          </thead>
+          <tbody aura:id="tbody">
+            <aura:iteration items="{!v.cryobags}" var="item">
+              <tr>
+                <td>{!item.DIN_Apheresis_ID__c}</td>
+                <td>{!item.CryobagNumber__c}</td>
+                <td>{!item.Cryobag_ID__c}</td>
+                <td><ui:outputCheckbox value="{!item.To_Be_Shipped__c}"/></td>
+                <td>{!item.Nucleated_Cell_Count__c}</td>
+                <td>TNC</td>
+                <td>{!item.TotalVolumePerBag__c}</td>
+              </tr>
+            </aura:iteration>
+          </tbody>
+        </table>
+      </lightning:layoutItem>
+    </aura:if>
+    
+    <aura:if isTrue="{!not(v.reviewMode)}">
+      <lightning:layoutItem size="12">
+        <!-- Add/Remove buttons-->
+        <div class="float">
+          <lightning:button class="slds-m-top_small" label="Add Cryobag" onclick="{!c.addCryobag}"/>
+          <lightning:button class="slds-m-top_small" label="Remove Cryobag" onclick="{!c.removeCryobag}" disabled="{!v.cryobags.length == 1}"/>
+        </div>
+        <table role="grid" tabindex="0" class="slds-table slds-table_header-fixed slds-table_bordered slds-table_edit" >
+          <thead>
+            <tr class="slds-line-height_reset">
+              <th class="slds-text-title_caps" tabindex="-1" >
+                    DIN/APHERESIS ID
+              </th>
+              <th class="slds-text-title_caps" tabindex="-1" >
+                  Cryobag #
+              </th>
+              <th class="slds-text-title_caps" tabindex="-1" >
+                  Cryobag ID
+              </th>
+              <th class="slds-text-title_caps" tabindex="-1" >
+                  To Be Shipped
+              </th>
+              <th class="slds-text-title_caps" tabindex="-1" >
+                  Total Nucleated Cell Count
+              </th>
+              <th class="slds-text-title_caps" tabindex="-1" >
+                  UoM
+              </th>
+              <th class="slds-text-title_caps" tabindex="-1" >
+                  Total Volume per bag (ml)
+              </th>
+            </tr>
+          </thead>
+          <tbody aura:id="tbody">
+            <aura:iteration items="{!v.cryobags}" var="item">
+              <tr>
+                <td>
+                    <lightning:input type="text" value="{!item.DIN_Apheresis_ID__c}" required="true"/>
+                </td>
+                <td>
+                  <lightning:input type="text" name="CryobagNumber__c" value="{!item.CryobagNumber__c}"/>
+                </td>
+                <td>
+                  <lightning:input type="text" name="Cryobag_ID__c" value="{!item.Cryobag_ID__c}"/>
+                </td>
+                <td><ui:inputCheckbox value="{!item.To_Be_Shipped__c}"/></td>
+                <td><lightning:input type="number" name="Nucleated_Cell_Count__c" value="{!item.Nucleated_Cell_Count__c}"/></td>
+                <td>TNC</td>
+                <td><lightning:input type="number" name="TotalVolumePerBag__c" value="{!item.TotalVolumePerBag__c}"/></td>
+              </tr>
+            </aura:iteration>
+          </tbody>
+        </table>
+
+      </lightning:layoutItem>
+      <lightning:layoutItem size="12">
+        <lightning:button class="slds-m-top_small" type="submit" label="Next" onclick="{!c.clickNext}"/>
+      </lightning:layoutItem>
+    </aura:if>
+</aura:component>

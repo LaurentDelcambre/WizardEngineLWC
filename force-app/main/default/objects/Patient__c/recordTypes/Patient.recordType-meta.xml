@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Patient</fullName>
+    <active>true</active>
+    <description>Standard Record Type</description>
+    <label>Patient</label>
+    <picklistValues>
+        <picklist>PatientClassification__c</picklist>
+        <values>
+            <fullName>Adult</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pediatric</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Young Adult</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

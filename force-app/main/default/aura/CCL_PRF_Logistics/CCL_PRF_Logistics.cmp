@@ -1,0 +1,116 @@
+<aura:component controller="CCL_PRFController" implements="forceCommunity:availableForAllPageTypes" access="global">
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+	<aura:registerEvent name="navigationEvent" type="c:CCL_PRF_NavigationEvent"/>
+
+	<aura:attribute name="reviewMode" type="Boolean" default="false"/>
+
+	<aura:attribute name="selectedPurposeId" type="Id" required="true"/>
+	<aura:attribute name="selectedSiteId" type="Id" required="true"/>
+
+	<aura:attribute name="recordId" type="Id" required="true"/>
+
+	<aura:attribute name="logisticsLabels" type="String[]" />
+
+	<aura:attribute name="apheresisCenters" type="List"/>
+	<aura:attribute name="selectedApheresisCenterId" type="Id"/>
+	<aura:attribute name="pickUpLocations" type="List"/>
+	<aura:attribute name="selectedPickUpLocationId" type="Id"/>
+	<aura:attribute name="infusionCenters" type="List"/>
+	<aura:attribute name="selectedInfusionCenterId" type="Id"/>
+	<aura:attribute name="shipToLocations" type="List"/>
+	<aura:attribute name="selectedShipToLocationId" type="Id"/>
+	
+	<!-- Review mode -->
+	<aura:if isTrue="{!v.reviewMode}">
+			<lightning:recordViewForm recordId="{!v.recordId}" objectApiName="PRF__c">
+				<div class="slds-grid slds-wrap custom-container">
+						<div class="slds-p-horizontal_small slds-size_1-of-2">
+						<lightning:outputField fieldName="ApheresisCenter__c" />
+					</div>
+					<div class="slds-p-horizontal_small slds-size_1-of-2">
+						<lightning:outputField fieldName="PickupLocation__c" />
+					</div>
+					<div class="slds-p-horizontal_small slds-size_1-of-2">
+						<lightning:outputField fieldName="InfusionCenter__c" />
+					</div>
+					<div class="slds-p-horizontal_small slds-size_1-of-2">
+						<lightning:outputField fieldName="ShipToLocation__c" />
+					</div>
+				</div>
+			</lightning:recordViewForm>
+	</aura:if>
+
+	<!-- Edit mode -->
+	<aura:if isTrue="{!not(v.reviewMode)}">
+		<!-- Apheresis Center-->
+    <lightning:layoutItem size="12">
+        <div class="slds-p-horizontal_small">
+					<p class="slds-text-heading_small">
+						<lightning:select aura:id="selectApheresisCenter" name="selectApheresisCenter" label="{!v.logisticsLabels[0]}" 
+								value="{!v.selectedApheresisCenterId}" onchange="{!c.filterPickUpLocations}" required="true" messageWhenValueMissing="Please enter an Apheresis Center"
+								disabled="{!v.reviewMode}">
+								<option value="">Choose an Apheresis Center</option>
+								<aura:iteration items="{!v.apheresisCenters}" var="apheresisCenter">
+										<option value="{!apheresisCenter.Id}" selected="{!apheresisCenter.Id == v.selectedApheresisCenterId}">{!apheresisCenter.Name}</option>
+								</aura:iteration>
+						</lightning:select>
+					</p>
+        </div>
+		</lightning:layoutItem>
+
+		<!-- PickUp Locations-->
+    <lightning:layoutItem size="12">
+        <div class="slds-p-horizontal_small">
+            <p class="slds-text-heading_small">
+                <lightning:select aura:id="selectPickupLocation" name="selectPickupLocation" label="{!v.logisticsLabels[1]}" 
+										value="{!v.selectedPickUpLocationId}" required="true" 
+										messageWhenValueMissing="Please enter a PickUp Location" disabled="true" >
+									<option value="">Choose a PickUp Location</option>
+									<aura:iteration items="{!v.pickUpLocations}" var="pickUpLocation">
+											<option value="{!pickUpLocation.Id}" selected="{!pickUpLocation.Id == v.selectedPickUpLocationId}">{!pickUpLocation.Name}</option>
+									</aura:iteration>
+                </lightning:select>
+            </p>
+        </div>
+		</lightning:layoutItem>
+
+		<!-- Infusion Centers-->
+    <lightning:layoutItem size="12">
+        <div class="slds-p-horizontal_small">
+            <p class="slds-text-heading_small">
+                <lightning:select aura:id="selectedInfusionCenter" name="selectedInfusionCenter" label="{!v.logisticsLabels[2]}" 
+										value="{!v.selectedInfusionCenterId}" onchange="{!c.filterShipToLocations}" required="true" 
+										messageWhenValueMissing="Please enter an Infusion Center" 
+										disabled="{!v.reviewMode}">
+									<option value="">Choose an Infusion Center</option>
+									<aura:iteration items="{!v.infusionCenters}" var="infusionCenter">
+											<option value="{!infusionCenter.Id}" selected="{!infusionCenter.Id == v.selectedInfusionCenterId}">{!infusionCenter.Name}</option>
+									</aura:iteration>
+                </lightning:select>
+            </p>
+        </div>
+		</lightning:layoutItem>
+
+		<!-- ShipTo Locations-->
+    <lightning:layoutItem size="12">
+        <div class="slds-p-horizontal_small">
+            <p class="slds-text-heading_small">
+                <lightning:select aura:id="selectShipToLocation" name="selectShipToLocation" label="{!v.logisticsLabels[3]}" 
+										value="{!v.selectedShipToLocationId}" required="true" 
+										messageWhenValueMissing="Please enter a ShipTo Location" disabled="true" >
+									<option value="">Choose a ShipTo Location</option>
+									<aura:iteration items="{!v.shipToLocations}" var="shipToLocation">
+											<option value="{!shipToLocation.Id}" selected="{!shipToLocation.Id == v.selectedShipToLocationId}">{!shipToLocation.Name}</option>
+									</aura:iteration>
+                </lightning:select>
+            </p>
+        </div>
+		</lightning:layoutItem>
+	
+		<lightning:layoutItem size="12" flexibility="auto" padding="around-small">
+			<lightning:button class="slds-m-top_small" variant="destructive" label="Previous" onclick="{!c.clickPrevious}"/>
+			<lightning:button class="slds-m-top_small" type="submit" label="Next" onclick="{!c.clickNext}"/>
+		</lightning:layoutItem>
+	</aura:if>
+
+</aura:component>	

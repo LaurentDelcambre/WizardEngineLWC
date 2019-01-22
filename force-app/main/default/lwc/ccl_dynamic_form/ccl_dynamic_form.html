@@ -1,0 +1,46 @@
+<template>
+    <lightning-card>
+        <!-- Display the new contact form: no recordId attribute = NEW Record -->
+            <lightning-record-edit-form object-api-name={sObjectName}
+                                        record-id={recordId}
+                                        record-type-id={recordTypeId}
+                                        onsuccess={handleSuccess}
+                                        onsubmit={handleSubmit}>
+                <lightning-messages></lightning-messages>
+
+                <template for:each={listCustomFields} for:item="item" for:index="index">
+
+
+                  <div key={item.id}>
+                    <!-- Section -->
+                    <template if:true={item.isSection}>
+                    	<!--<h3 class="slds-section__title slds-theme_shade"></h3>-->
+											<h3 class="slds-section-title_divider slds-has-divider_bottom">{item.label}</h3>
+                    </template>
+                    <template if:false={item.isSection}>
+                      <div class="slds-p-horizontal_small">
+                        <lightning-input-field id={item.idStandard} data-unique-name={item.id} key={item.id} field-name={item.originalField}  ></lightning-input-field>
+                        <template if:true={item.hasCustomField}>
+                          <c-ccl_wizard_color_picker id={item.idCustom} data-standard={item.idStandard} title={item.MasterLabel} onmodified={handleModified}></c-ccl_wizard_color_picker>
+                        </template>
+                      </div>
+                    </template>
+                </div>
+                </template>
+
+                <br>
+                <div>
+                    <lightning-button class="slds-m-top_small" variant="destructive" label="Previous" onclick={clickPrevious}></lightning-button>
+                    <lightning-button class="slds-m-around_x-small" type="submit" variant="destructive" label="Next" ></lightning-button>
+                </div>
+                <span class="slds-m-around_small status">{createStatus}</span>
+            </lightning-record-edit-form>
+
+        <!-- Spinner -->
+        <template if:true={isLoading}>
+            <lightning-spinner size="large" alternative-text="Loading" ></lightning-spinner>
+        </template>
+    </lightning-card>
+
+    LOG:{logtext}
+</template>

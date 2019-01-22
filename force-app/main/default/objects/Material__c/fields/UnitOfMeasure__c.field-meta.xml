@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>UnitOfMeasure__c</fullName>
+    <externalId>false</externalId>
+    <label>Unit of Measure</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>NC/Kg</fullName>
+                <default>false</default>
+                <label>NC/Kg</label>
+            </value>
+            <value>
+                <fullName>TNC</fullName>
+                <default>false</default>
+                <label>TNC</label>
+            </value>
+            <value>
+                <fullName>mL</fullName>
+                <default>false</default>
+                <label>mL</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

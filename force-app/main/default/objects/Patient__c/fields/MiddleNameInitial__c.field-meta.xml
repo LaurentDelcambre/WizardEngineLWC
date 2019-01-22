@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MiddleNameInitial__c</fullName>
+    <description>one letter only</description>
+    <externalId>false</externalId>
+    <inlineHelpText>one letter only, e.g. for John please insert a "J"</inlineHelpText>
+    <label>Middle Name Initial</label>
+    <length>1</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

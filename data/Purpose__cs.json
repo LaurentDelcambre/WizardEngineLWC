@@ -1,0 +1,33 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "Purpose__c",
+                "referenceId": "Purpose__cRef1"
+            },
+            "Name": "Kymriah – Commercial DE",
+            "Practice__c": "Commercial",
+            "PurposeCode__c": "DE_STE",
+            "Region__c": "US"
+        },
+        {
+            "attributes": {
+                "type": "Purpose__c",
+                "referenceId": "Purpose__cRef2"
+            },
+            "Name": "Kymriah – Commercial IT",
+            "Practice__c": "Commercial",
+            "Region__c": "US"
+        },
+        {
+            "attributes": {
+                "type": "Purpose__c",
+                "referenceId": "Purpose__cRef4"
+            },
+            "Name": "Kymriah – Commercial US",
+            "Practice__c": "Commercial",
+            "PurposeCode__c": "US_KYM",
+            "Region__c": "US"
+        }
+    ]
+}

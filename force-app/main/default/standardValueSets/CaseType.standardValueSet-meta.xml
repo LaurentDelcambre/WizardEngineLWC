@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Problem</fullName>
+        <default>false</default>
+        <label>Problem</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Feature Request</fullName>
+        <default>false</default>
+        <label>Feature Request</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Question</fullName>
+        <default>false</default>
+        <label>Question</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Coverage Approval Support</fullName>
+        <default>false</default>
+        <label>Coverage Approval Support</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Network Investigation</fullName>
+        <default>false</default>
+        <label>Network Investigation</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Education</fullName>
+        <default>false</default>
+        <label>Education</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Travel Assistance</fullName>
+        <default>false</default>
+        <label>Travel Assistance</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Financial Support</fullName>
+        <default>false</default>
+        <label>Financial Support</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Kymriah Clinical</fullName>
+        <default>false</default>
+        <label>Kymriah Clinical</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Kymriah Commercial</fullName>
+        <default>false</default>
+        <label>Kymriah Commercial</label>
+    </standardValue>
+</StandardValueSet>

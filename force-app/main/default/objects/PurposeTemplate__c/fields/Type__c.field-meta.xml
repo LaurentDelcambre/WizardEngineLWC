@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Document</fullName>
+                <default>false</default>
+                <label>Document</label>
+            </value>
+            <value>
+                <fullName>Label</fullName>
+                <default>false</default>
+                <label>Label</label>
+            </value>
+            <value>
+                <fullName>PRF_Wizard</fullName>
+                <default>false</default>
+                <label>PRF_Wizard</label>
+            </value>
+            <value>
+                <fullName>ADF_Wizard</fullName>
+                <default>false</default>
+                <label>ADF_Wizard</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

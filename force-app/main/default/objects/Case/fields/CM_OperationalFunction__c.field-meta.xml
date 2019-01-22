@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CM_OperationalFunction__c</fullName>
+    <description>3rd Level Case Management</description>
+    <externalId>false</externalId>
+    <label>Case Mgt: Operational Function</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>CM_ServiceModule__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>A1. Capture Site Certification Data (Site Set-Up)</fullName>
+                <default>false</default>
+                <label>A1. Capture Site Certification Data (Site Set-Up)</label>
+            </value>
+            <value>
+                <fullName>A2. Triage Site/HCP Certification Data</fullName>
+                <default>false</default>
+                <label>A2. Triage Site/HCP Certification Data</label>
+            </value>
+            <value>
+                <fullName>A3. Confirm Certified Site Set-Up</fullName>
+                <default>false</default>
+                <label>A3. Confirm Certified Site Set-Up</label>
+            </value>
+            <value>
+                <fullName>A4. Update Site Certification Data (Ongoing Management)</fullName>
+                <default>false</default>
+                <label>A4. Update Site Certification Data (Ongoing Management)</label>
+            </value>
+            <value>
+                <fullName>B1. Receive Product Request</fullName>
+                <default>false</default>
+                <label>B1. Receive Product Request</label>
+            </value>
+            <value>
+                <fullName>B2. Reserve an Allocated Plant Appointment (PA)</fullName>
+                <default>false</default>
+                <label>B2. Reserve an Allocated Plant Appointment (PA)</label>
+            </value>
+            <value>
+                <fullName>B3. Associate Patient with Allocated PA</fullName>
+                <default>false</default>
+                <label>B3. Associate Patient with Allocated PA</label>
+            </value>
+            <value>
+                <fullName>B4. Facilitate Second-Person Product Request Review</fullName>
+                <default>false</default>
+                <label>B4. Facilitate Second-Person Product Request Review</label>
+            </value>
+            <value>
+                <fullName>B5. Forward Product Ordering Data</fullName>
+                <default>false</default>
+                <label>B5. Forward Product Ordering Data</label>
+            </value>
+            <value>
+                <fullName>C1. Respond to Aph PO Related Inquiries</fullName>
+                <default>false</default>
+                <label>C1. Respond to Aph PO Related Inquiries</label>
+            </value>
+            <value>
+                <fullName>C2. Communicate Aph Transportation Status</fullName>
+                <default>false</default>
+                <label>C2. Communicate Aph Transportation Status</label>
+            </value>
+            <value>
+                <fullName>D1. Communicate Order Status/Batch ID</fullName>
+                <default>false</default>
+                <label>D1. Communicate Order Status/Batch ID</label>
+            </value>
+            <value>
+                <fullName>D2. Communicate Kymriah Transportation Status</fullName>
+                <default>false</default>
+                <label>D2. Communicate Kymriah Transportation Status</label>
+            </value>
+            <value>
+                <fullName>E1. Communicate Rescheduling Request</fullName>
+                <default>false</default>
+                <label>E1. Communicate Rescheduling Request</label>
+            </value>
+            <value>
+                <fullName>E2. Receive Cancellation Request</fullName>
+                <default>false</default>
+                <label>E2. Receive Cancellation Request</label>
+            </value>
+            <value>
+                <fullName>E3. Triage Cancellation Request</fullName>
+                <default>false</default>
+                <label>E3. Triage Cancellation Request</label>
+            </value>
+            <value>
+                <fullName>E4. Receive Finished Product Return Request</fullName>
+                <default>false</default>
+                <label>E4. Receive Finished Product Return Request</label>
+            </value>
+            <value>
+                <fullName>E5. Triage Finished Product Return Request</fullName>
+                <default>false</default>
+                <label>E5. Triage Finished Product Return Request</label>
+            </value>
+            <value>
+                <fullName>E6. Communicate Replacement Product Delivery Request</fullName>
+                <default>false</default>
+                <label>E6. Communicate Replacement Product Delivery Request</label>
+            </value>
+            <value>
+                <fullName>A1. Respond to Post-Certification Inquiries</fullName>
+                <default>false</default>
+                <label>A1. Respond to Post-Certification Inquiries</label>
+            </value>
+            <value>
+                <fullName>A2. Respond to User Registration Inquiries</fullName>
+                <default>false</default>
+                <label>A2. Respond to User Registration Inquiries</label>
+            </value>
+            <value>
+                <fullName>A3. Provide Certification Training Materials</fullName>
+                <default>false</default>
+                <label>A3. Provide Certification Training Materials</label>
+            </value>
+            <value>
+                <fullName>B1. Respond to Lead-Time Inquiries</fullName>
+                <default>false</default>
+                <label>B1. Respond to Lead-Time Inquiries</label>
+            </value>
+            <value>
+                <fullName>B2. Respond to Order Process Inquiries</fullName>
+                <default>false</default>
+                <label>B2. Respond to Order Process Inquiries</label>
+            </value>
+            <value>
+                <fullName>B3. Respond to System/Platform Related Issues</fullName>
+                <default>false</default>
+                <label>B3. Respond to System/Platform Related Issues</label>
+            </value>
+            <value>
+                <fullName>B4. Respond to Aph/Cryo Logistics &amp; Transportation Inquiries</fullName>
+                <default>false</default>
+                <label>B4. Respond to Aph/Cryo Logistics &amp; Transportation Inquiries</label>
+            </value>
+            <value>
+                <fullName>B5. Respond to Return/Cancellation Inquiries</fullName>
+                <default>false</default>
+                <label>B5. Respond to Return/Cancellation Inquiries</label>
+            </value>
+            <value>
+                <fullName>C1. Respond to Aph/Cryo Product Inquiries</fullName>
+                <default>false</default>
+                <label>C1. Respond to Aph/Cryo Product Inquiries</label>
+            </value>
+            <value>
+                <fullName>C2. Respond to Patient Treatment Related Inquiries</fullName>
+                <default>false</default>
+                <label>C2. Respond to Patient Treatment Related Inquiries</label>
+            </value>
+            <value>
+                <fullName>C3. Respond to Kymriah Related Inquiries</fullName>
+                <default>false</default>
+                <label>C3. Respond to Kymriah Related Inquiries</label>
+            </value>
+            <value>
+                <fullName>C4. Triage to Expert Advisory Board</fullName>
+                <default>false</default>
+                <label>C4. Triage to Expert Advisory Board</label>
+            </value>
+            <value>
+                <fullName>C5. Respond to Inquiries on REMS program</fullName>
+                <default>false</default>
+                <label>C5. Respond to Inquiries on REMS program</label>
+            </value>
+            <value>
+                <fullName>A1. Conduct Benefits Investigation</fullName>
+                <default>false</default>
+                <label>A1. Conduct Benefits Investigation</label>
+            </value>
+            <value>
+                <fullName>A2. Assist with PA &amp; Appeals</fullName>
+                <default>false</default>
+                <label>A2. Assist with PA &amp; Appeals</label>
+            </value>
+            <value>
+                <fullName>A3. Provide Billing and Claims Support</fullName>
+                <default>false</default>
+                <label>A3. Provide Billing and Claims Support</label>
+            </value>
+            <value>
+                <fullName>B1. Conduct Network Investigation</fullName>
+                <default>false</default>
+                <label>B1. Conduct Network Investigation</label>
+            </value>
+            <value>
+                <fullName>C1. Offer Patient Resource Materials</fullName>
+                <default>false</default>
+                <label>C1. Offer Patient Resource Materials</label>
+            </value>
+            <value>
+                <fullName>D1. Provide Copay Assistance</fullName>
+                <default>false</default>
+                <label>D1. Provide Copay Assistance</label>
+            </value>
+            <value>
+                <fullName>D2. Facilitate Free Goods Process</fullName>
+                <default>false</default>
+                <label>D2. Facilitate Free Goods Process</label>
+            </value>
+            <value>
+                <fullName>E1. Arrange Travel Assistance</fullName>
+                <default>false</default>
+                <label>E1. Arrange Travel Assistance</label>
+            </value>
+            <value>
+                <fullName>A1. Respond to New Certification Inquiries</fullName>
+                <default>false</default>
+                <label>A1. Respond to New Certification Inquiries</label>
+            </value>
+            <value>
+                <fullName>B1. Provide Certified Site Information</fullName>
+                <default>false</default>
+                <label>B1. Provide Certified Site Information</label>
+            </value>
+            <value>
+                <fullName>B2. Offer Referring HCP Guide</fullName>
+                <default>false</default>
+                <label>B2. Offer Referring HCP Guide</label>
+            </value>
+            <value>
+                <fullName>C1. Respond to Treated-Patient Inquiries</fullName>
+                <default>false</default>
+                <label>C1. Respond to Treated-Patient Inquiries</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Education/Info Resources</controllingFieldValue>
+            <valueName>C1. Offer Patient Resource Materials</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Financial Support</controllingFieldValue>
+            <valueName>D1. Provide Copay Assistance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Financial Support</controllingFieldValue>
+            <valueName>D2. Facilitate Free Goods Process</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Travel Assistance</controllingFieldValue>
+            <valueName>E1. Arrange Travel Assistance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Non-Certified Site/HCP Certification Inquiries</controllingFieldValue>
+            <valueName>A1. Respond to New Certification Inquiries</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Certified Site &amp; HCP Information</controllingFieldValue>
+            <valueName>B1. Provide Certified Site Information</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Certified Site &amp; HCP Information</controllingFieldValue>
+            <valueName>B2. Offer Referring HCP Guide</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Long-Term Patient Follow-Up</controllingFieldValue>
+            <valueName>C1. Respond to Treated-Patient Inquiries</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Site Data Management</controllingFieldValue>
+            <valueName>A1. Capture Site Certification Data (Site Set-Up)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Site Data Management</controllingFieldValue>
+            <valueName>A2. Triage Site/HCP Certification Data</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Site Data Management</controllingFieldValue>
+            <valueName>A3. Confirm Certified Site Set-Up</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Site Data Management</controllingFieldValue>
+            <valueName>A4. Update Site Certification Data (Ongoing Management)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product Request Processing</controllingFieldValue>
+            <valueName>B1. Receive Product Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product Request Processing</controllingFieldValue>
+            <valueName>B2. Reserve an Allocated Plant Appointment (PA)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product Request Processing</controllingFieldValue>
+            <valueName>B3. Associate Patient with Allocated PA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product Request Processing</controllingFieldValue>
+            <valueName>B4. Facilitate Second-Person Product Request Review</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product Request Processing</controllingFieldValue>
+            <valueName>B5. Forward Product Ordering Data</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Aph Tracking</controllingFieldValue>
+            <valueName>C1. Respond to Aph PO Related Inquiries</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Aph Tracking</controllingFieldValue>
+            <valueName>C2. Communicate Aph Transportation Status</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cell Processing Surveillance</controllingFieldValue>
+            <valueName>D1. Communicate Order Status/Batch ID</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cell Processing Surveillance</controllingFieldValue>
+            <valueName>D2. Communicate Kymriah Transportation Status</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Return, Cancellation &amp; Rescheduling</controllingFieldValue>
+            <valueName>E1. Communicate Rescheduling Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Return, Cancellation &amp; Rescheduling</controllingFieldValue>
+            <valueName>E2. Receive Cancellation Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Return, Cancellation &amp; Rescheduling</controllingFieldValue>
+            <valueName>E3. Triage Cancellation Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Return, Cancellation &amp; Rescheduling</controllingFieldValue>
+            <valueName>E4. Receive Finished Product Return Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Return, Cancellation &amp; Rescheduling</controllingFieldValue>
+            <valueName>E5. Triage Finished Product Return Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Return, Cancellation &amp; Rescheduling</controllingFieldValue>
+            <valueName>E6. Communicate Replacement Product Delivery Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Certification Follow-Up/FAQ</controllingFieldValue>
+            <valueName>A1. Respond to Post-Certification Inquiries</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Certification Follow-Up/FAQ</controllingFieldValue>
+            <valueName>A2. Respond to User Registration Inquiries</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Certification Follow-Up/FAQ</controllingFieldValue>
+            <valueName>A3. Provide Certification Training Materials</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General Order Process Queries</controllingFieldValue>
+            <valueName>B1. Respond to Lead-Time Inquiries</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General Order Process Queries</controllingFieldValue>
+            <valueName>B2. Respond to Order Process Inquiries</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General Order Process Queries</controllingFieldValue>
+            <valueName>B3. Respond to System/Platform Related Issues</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General Order Process Queries</controllingFieldValue>
+            <valueName>B4. Respond to Aph/Cryo Logistics &amp; Transportation Inquiries</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General Order Process Queries</controllingFieldValue>
+            <valueName>B5. Respond to Return/Cancellation Inquiries</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Medical Information Support</controllingFieldValue>
+            <valueName>C1. Respond to Aph/Cryo Product Inquiries</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Medical Information Support</controllingFieldValue>
+            <valueName>C2. Respond to Patient Treatment Related Inquiries</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Medical Information Support</controllingFieldValue>
+            <valueName>C3. Respond to Kymriah Related Inquiries</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Medical Information Support</controllingFieldValue>
+            <valueName>C4. Triage to Expert Advisory Board</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Medical Information Support</controllingFieldValue>
+            <valueName>C5. Respond to Inquiries on REMS program</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Coverage Approval Support</controllingFieldValue>
+            <valueName>A1. Conduct Benefits Investigation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Coverage Approval Support</controllingFieldValue>
+            <valueName>A2. Assist with PA &amp; Appeals</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Coverage Approval Support</controllingFieldValue>
+            <valueName>A3. Provide Billing and Claims Support</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Network Investigation</controllingFieldValue>
+            <valueName>B1. Conduct Network Investigation</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

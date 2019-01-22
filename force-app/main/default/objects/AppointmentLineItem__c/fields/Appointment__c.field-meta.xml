@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Appointment__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Appointment the line item belongs to</inlineHelpText>
+    <label>Appointment</label>
+    <referenceTo>Appointment__c</referenceTo>
+    <relationshipLabel>Line Items</relationshipLabel>
+    <relationshipName>AppointmentLineItems</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>true</writeRequiresMasterRead>
+</CustomField>

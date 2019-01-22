@@ -1,0 +1,136 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "Account",
+                "referenceId": "AccountRef1"
+            },
+            "CertifiedSite__c": true,
+            "ISBTCompliant__c": false,
+            "Name": "Hospital -MDA Cancer Center",
+            "RecordTypeId": "0124E000000GxnkQAC",
+            "Type": "Site"
+        },
+        {
+            "attributes": {
+                "type": "Account",
+                "referenceId": "AccountRef18"
+            },
+            "CertifiedSite__c": false,
+            "ISBTCompliant__c": false,
+            "Name": "Hospital - Mayo Clinic",
+            "RecordTypeId": "0124E000000GxnkQAC",
+            "Type": "Site"
+        },
+        {
+            "attributes": {
+                "type": "Account",
+                "referenceId": "AccountRef2"
+            },
+            "CertifiedSite__c": false,
+            "Description": "Groups different hubs material is ship through to Europe",
+            "ISBTCompliant__c": false,
+            "Name": "ROUTE - Morris Plains to EU",
+            "RecordTypeId": "0124E000000GxnjQAC",
+            "Type": "ROUTE"
+        },
+        {
+            "attributes": {
+                "type": "Account",
+                "referenceId": "AccountRef6"
+            },
+            "CertifiedSite__c": false,
+            "Description": "European Release Hub for material",
+            "ISBTCompliant__c": false,
+            "Name": "Release Hub - Boenen",
+            "RecordTypeId": "0124E000000GxnjQAC",
+            "Type": "ROUTE"
+        },
+        {
+            "attributes": {
+                "type": "Account",
+                "referenceId": "AccountRef3"
+            },
+            "CertifiedSite__c": false,
+            "ISBTCompliant__c": false,
+            "Name": "SHIP - INT -MDA Centre",
+            "RecordTypeId": "0124E000000GxngQAC"
+        },
+        {
+            "attributes": {
+                "type": "Account",
+                "referenceId": "AccountRef9"
+            },
+            "CertifiedSite__c": false,
+            "ISBTCompliant__c": false,
+            "Name": "INF - MDA - Internal Center",
+            "RecordTypeId": "0124E000000GxngQAC"
+        },
+        {
+            "attributes": {
+                "type": "Account",
+                "referenceId": "AccountRef5"
+            },
+            "CertifiedSite__c": false,
+            "ISBTCompliant__c": false,
+            "Name": "PICK - EXT -Fresenius APH",
+            "RecordTypeId": "0124E000000GxneQAC",
+            "Type": "APH"
+        },
+        {
+            "attributes": {
+                "type": "Account",
+                "referenceId": "AccountRef10"
+            },
+            "CertifiedSite__c": false,
+            "ISBTCompliant__c": false,
+            "Name": "APH - EXT -Fresenius APH",
+            "RecordTypeId": "0124E000000GxneQAC",
+            "Type": "APH"
+        },
+        {
+            "attributes": {
+                "type": "Account",
+                "referenceId": "AccountRef15"
+            },
+            "CertifiedSite__c": false,
+            "ISBTCompliant__c": false,
+            "Name": "Plant -Morris Plains",
+            "RecordTypeId": "0124E000000GxniQAC",
+            "Type": "Plant"
+        },
+        {
+            "attributes": {
+                "type": "Account",
+                "referenceId": "AccountRef16"
+            },
+            "CertifiedSite__c": false,
+            "ISBTCompliant__c": false,
+            "Name": "Plant -Fraunhofer",
+            "RecordTypeId": "0124E000000GxniQAC",
+            "Type": "Plant"
+        },
+        {
+            "attributes": {
+                "type": "Account",
+                "referenceId": "AccountRef17"
+            },
+            "CertifiedSite__c": false,
+            "ISBTCompliant__c": false,
+            "Name": "Patient - Emily Rose",
+            "RecordTypeId": "0124E000000GxnhQAC",
+            "Type": "Patient"
+        },
+        {
+            "attributes": {
+                "type": "Account",
+                "referenceId": "AccountRef4"
+            },
+            "CertifiedSite__c": false,
+            "ISBTCompliant__c": false,
+            "Name": "Robert Koch (EXT)",
+            "RecordTypeId": "0124E000000GxnfQAC",
+            "Type": "HCP"
+        }
+    ]
+}

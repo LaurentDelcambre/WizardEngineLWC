@@ -1,0 +1,147 @@
+{
+    "records": [
+      {
+        "attributes": {
+            "type": "Case",
+            "referenceId": "CaseRef1"
+        },
+      "AccountId": "@AccountRef1",
+			"ApheresisCenter__c": "",
+			"ContactId":"@ContactRef3",
+			"ParentId":"",
+			"Patient__c":"",
+			"Purpose__c":"",
+      "Priority": "Medium",
+      "Status": "In Progress",
+      "Status_Apheresis_Pickup__c": "Apheresis - Waiting Confirmation",
+      "Status_Apheresis_Procedure__c": "Apheresis - To be confirmed",
+      "Status_Cell_Processing__c": "Cell Processing - Waiting Confirmation",
+      "Status_Finished_Product_Delivery__c": "Finished Product Delivery - Waiting Confirmation",
+      "Status_Overall_Infusion__c": "Infusion - Not Started",
+      "Status_Overall_Treatment__c": "In Progress",
+      "Subject": "Program (Enrollment)-Kymriah Commercial-5000E000006BsEaQAK",
+      "Type": "Kymriah Commercial",
+      "RecordTypeId": "0124E000000GxnpQAC"
+    },
+    {
+      "attributes": {
+          "type": "Case",
+          "referenceId": "CaseRef4"
+      },
+      "AccountId": "@AccountRef1",
+			"ApheresisCenter__c": "",
+			"ContactId":"@ContactRef3",
+			"ParentId":"",
+			"Patient__c":"@Patient__cRef1",
+			"Purpose__c":"@Purpose__cRef4",
+      "ApheresisPickupPlanned__c": "2018-04-17T10:00:00.000+0000",
+      "Description": "Group Batch Number:  updated",
+      "GroupBatchNumber__c": "MP1234",
+      "PickupCourierNumber__c": "WC1254",
+      "Priority": "Medium",
+      "Status": "New",
+      "Status_Plant_Appointment__c": "Reserved",
+      "Subject": "Treatment-Problem-MP1234",
+      "Type": "Problem",
+      "RecordTypeId": "0124E000000GxnsQAC"
+    },
+    {
+      "attributes": {
+          "type": "Case",
+          "referenceId": "CaseRef5"
+      },
+      "AccountId": "@AccountRef1",
+			"ApheresisCenter__c": "",
+			"ContactId":"@ContactRef3",
+			"ParentId":"",
+			"Patient__c":"@Patient__cRef1",
+			"Purpose__c":"@Purpose__cRef4",
+      "ApheresisPickupPlanned__c": "2018-04-17T10:00:00.000+0000",
+      "Description": "Group Batch Number:  updated",
+      "GroupBatchNumber__c": "MP1234",
+      "PickupCourierNumber__c": "WC1254",
+      "Priority": "Medium",
+      "Status": "Apheresis Procedure",
+      "Subject": "Treatment-Problem-MP1234",
+      "Type": "Problem",
+      "RecordTypeId": "0124E000000GxnsQAC"
+    },
+    {
+      "attributes": {
+          "type": "Case",
+          "referenceId": "CaseRef6"
+      },
+      "AccountId": "@AccountRef1",
+			"ContactId":"@ContactRef3",
+			"Patient__c":"@Patient__cRef1",
+			"Purpose__c":"@Purpose__cRef4",
+      "ADF_Status__c": "Draft",
+      "PRFSubmittedDate__c": "2018-04-27T07:06:38.000+0000",
+      "PRF_Status__c": "Draft",
+      "Priority": "Medium",
+      "Status": "Infusion",
+      "Status_Apheresis_Pickup__c": "Apheresis - Waiting Confirmation",
+      "Status_Apheresis_Procedure__c": "Apheresis - To be confirmed",
+      "Status_Cell_Processing__c": "Cell Processing - Waiting Confirmation",
+      "Status_Finished_Product_Delivery__c": "Finished Product Delivery - Waiting Confirmation",
+      "Status_Overall_Infusion__c": "Infusion - Not Started",
+      "Status_Overall_Treatment__c": "In Progress",
+      "Status_Plant_Appointment__c": "Open",
+      "Subject": "Treatment--",
+      "RecordTypeId": "0124E000000GxnsQAC"
+    },
+    {
+      "attributes": {
+          "type": "Case",
+          "referenceId": "CaseRef7"
+      },
+      "AccountId": "@AccountRef1",
+			"ApheresisCenter__c": "",
+			"ContactId":"@ContactRef3",
+			"ParentId":"",
+			"Patient__c":"@Patient__cRef1",
+			"Purpose__c":"@Purpose__cRef4",
+      "ADF_Status__c": "Draft",
+      "PRFApprovedDate__c": "2018-04-27T07:47:07.000+0000",
+      "PRFSubmittedDate__c": "2018-04-27T07:46:06.000+0000",
+      "PRF_Status__c": "Approved",
+      "Priority": "Medium",
+      "Status": "Finished Material Delivery",
+      "Status_Apheresis_Pickup__c": "Apheresis - Waiting Confirmation",
+      "Status_Apheresis_Procedure__c": "Apheresis - To be confirmed",
+      "Status_Cell_Processing__c": "Cell Processing - Waiting Confirmation",
+      "Status_Finished_Product_Delivery__c": "Finished Product Delivery - Waiting Confirmation",
+      "Status_Overall_Infusion__c": "Infusion - Not Started",
+      "Status_Overall_Treatment__c": "In Progress",
+      "Status_Plant_Appointment__c": "Reserved - Waiting Confirmation",
+      "Subject": "Treatment--",
+      "RecordTypeId": "0124E000000GxnsQAC"
+    },
+    {
+      "attributes": {
+          "type": "Case",
+          "referenceId": "CaseRef9"
+      },
+      "AccountId": "@AccountRef1",
+			"ApheresisCenter__c": "",
+			"ContactId":"@ContactRef3",
+			"ParentId":"",
+			"Patient__c":"@Patient__cRef5",
+			"Purpose__c":"@Purpose__cRef1",
+      "ADF_Status__c": "Draft",
+      "PRFSubmittedDate__c": "2018-05-01T09:15:09.000+0000",
+      "PRF_Status__c": "Draft",
+      "Priority": "Medium",
+      "Status": "Closed",
+      "Status_Apheresis_Pickup__c": "Apheresis - Waiting Confirmation",
+      "Status_Apheresis_Procedure__c": "Apheresis - To be confirmed",
+      "Status_Cell_Processing__c": "Cell Processing - Waiting Confirmation",
+      "Status_Finished_Product_Delivery__c": "Finished Product Delivery - Waiting Confirmation",
+      "Status_Overall_Infusion__c": "Infusion - Not Started",
+      "Status_Overall_Treatment__c": "In Progress",
+      "Status_Plant_Appointment__c": "Allocated",
+      "Subject": "Treatment--",
+      "RecordTypeId": "0124E000000GxnsQAC"
+      }
+    ]
+}

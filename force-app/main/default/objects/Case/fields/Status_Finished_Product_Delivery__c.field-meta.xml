@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status_Finished_Product_Delivery__c</fullName>
+    <externalId>false</externalId>
+    <label>Status - Finished Product Delivery</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Finished Product Delivery - Waiting Confirmation</fullName>
+                <default>true</default>
+                <label>Finished Product Delivery - Waiting Confirmation</label>
+            </value>
+            <value>
+                <fullName>Finished Product Delivery - Planned</fullName>
+                <default>false</default>
+                <label>Finished Product Delivery - Planned</label>
+            </value>
+            <value>
+                <fullName>Finished Product - Released from Manufacturing Plant</fullName>
+                <default>false</default>
+                <label>Finished Product - Released from Manufacturing Plant</label>
+            </value>
+            <value>
+                <fullName>Finished Product - Released from Manufacturing Plant Reversed</fullName>
+                <default>false</default>
+                <label>Finished Product - Released from Manufacturing Plant Reversed</label>
+            </value>
+            <value>
+                <fullName>Finished Product - Shipped from Manufacturing Plant</fullName>
+                <default>false</default>
+                <label>Finished Product - Shipped from Manufacturing Plant</label>
+            </value>
+            <value>
+                <fullName>Finished Product - Shipped from Manufacturing Plant Reversed</fullName>
+                <default>false</default>
+                <label>Finished Product - Shipped from Manufacturing Plant Reversed</label>
+            </value>
+            <value>
+                <fullName>Finished Product - Received</fullName>
+                <default>false</default>
+                <label>Finished Product - Received</label>
+            </value>
+            <value>
+                <fullName>Finished Product Delivery - Cancelled</fullName>
+                <default>false</default>
+                <label>Finished Product Delivery - Cancelled</label>
+            </value>
+            <value>
+                <fullName>Finished Product - Released by Novartis</fullName>
+                <default>false</default>
+                <label>Finished Product - Released by Novartis</label>
+            </value>
+            <value>
+                <fullName>Finished Product - Released by Novartis Reversed</fullName>
+                <default>false</default>
+                <label>Finished Product - Released by Novartis Reversed</label>
+            </value>
+            <value>
+                <fullName>Finished Product - Shipped to Treatment Center</fullName>
+                <default>false</default>
+                <label>Finished Product - Shipped to Treatment Center</label>
+            </value>
+            <value>
+                <fullName>Finished Product - Shipped to Treatment Center Reversed</fullName>
+                <default>false</default>
+                <label>Finished Product - Shipped to Treatment Center Reversed</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,70 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef2"
+            },
+            "AccountId": "@AccountRef1",
+			"ApheresisCenter__c": "@AccountRef5",
+			"ContactId":"@ContactRef3",
+			"ParentId":"@CaseRef1",
+			"Patient__c":"@Patient__cRef1",
+			"Purpose__c":"@Purpose__cRef4",
+            "ADF_Status__c": "Submitted",
+            "ADF_Submitted_Date__c": "2018-04-25T12:55:05.000+0000",
+            "ApheresisEndLatest__c": "2018-05-06T12:30:00.000+0000",
+            "ApheresisPickupPlanned__c": "2018-05-07T06:30:00.000+0000",
+            "ApheresisStartEarliest__c": "2018-05-02T06:00:00.000+0000",
+            "PickupCourierNumber__c": "ABC123",
+            "PRFApprovedDate__c": "2018-04-25T12:23:35.000+0000",
+            "PRFSubmittedDate__c": "2018-04-25T12:22:58.000+0000",
+            "PRF_RejectedDate__c": "2018-04-25T11:52:00.000+0000",
+            "PRF_Status__c": "Approved",
+            "Priority": "High",
+            "PurchaseOrder__c": "PO 12345",
+            "SalesOrderNumber__c": "wc123-99-pp",
+            "Status": "Apheresis Procedure",
+            "Status_Apheresis_Pickup__c": "Apheresis - Planned Pickup",
+            "Status_Apheresis_Procedure__c": "Apheresis - To be confirmed",
+            "Status_Cell_Processing__c": "Cell Processing - Planned",
+            "Status_Finished_Product_Delivery__c": "Finished Product Delivery - Waiting Confirmation",
+            "Status_Overall_Infusion__c": "Infusion - Not Started",
+            "Status_Overall_Treatment__c": "In Progress",
+            "Status_Plant_Appointment__c": "Reserved - Approved",
+            "Subject": "Treatment--5000E000006BsF9QAK",
+            "RecordTypeId": "0124E000000GxnsQAC"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef3"
+            },
+            "AccountId": "@AccountRef1",
+			"ApheresisCenter__c": "",
+			"ContactId":"@ContactRef3",
+			"ParentId":"@CaseRef1",
+			"Patient__c":"@Patient__cRef1",
+			"Purpose__c":"@Purpose__cRef4",
+            "ADF_Approved_Date__c": "2018-04-25T12:48:03.000+0000",
+            "ADF_Status__c": "Approved",
+            "ApheresisDatePlanned__c": "2018-03-01T12:00:00.000+0000",
+            "ApheresisPickupPlanned__c": "2018-04-27T12:00:00.000+0000",
+            "PRFApprovedDate__c": "2018-04-25T11:46:58.000+0000",
+            "PRFSubmittedDate__c": "2018-04-25T11:46:34.000+0000",
+            "PRF_Status__c": "Approved",
+            "Priority": "Medium",
+            "Status": "Cell Processing",
+            "Status_Apheresis_Pickup__c": "Apheresis - Waiting Confirmation",
+            "Status_Apheresis_Procedure__c": "Apheresis - To be confirmed",
+            "Status_Cell_Processing__c": "Cell Processing - Waiting Confirmation",
+            "Status_Finished_Product_Delivery__c": "Finished Product Delivery - Waiting Confirmation",
+            "Status_Overall_Infusion__c": "Infusion - Not Started",
+            "Status_Overall_Treatment__c": "In Progress",
+            "Status_Plant_Appointment__c": "Open",
+            "Subject": "Emily Rose - Kymriah",
+            "Type": "Feature Request",
+            "RecordTypeId": "0124E000000GxnrQAC"
+        }
+    ]
+}

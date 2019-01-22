@@ -1,0 +1,44 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "AccountPurpose__c",
+                "referenceId": "AccountPurpose__cRef1"
+            },
+            "Account__c": "@AccountRef1",
+			"Purpose__c": "@Purpose__cRef1"
+        },
+        {
+            "attributes": {
+                "type": "AccountPurpose__c",
+                "referenceId": "AccountPurpose__cRef2"
+            },
+            "Account__c": "@AccountRef1",
+			"Purpose__c": "@Purpose__cRef4"
+        },
+        {
+            "attributes": {
+                "type": "AccountPurpose__c",
+                "referenceId": "AccountPurpose__cRef4"
+            },
+            "Account__c": "@AccountRef10",
+			"Purpose__c": "@Purpose__cRef4"
+        },
+        {
+            "attributes": {
+                "type": "AccountPurpose__c",
+                "referenceId": "AccountPurpose__cRef8"
+            },
+            "Account__c": "@AccountRef18",
+			"Purpose__c": "@Purpose__cRef4"
+        },
+        {
+            "attributes": {
+                "type": "AccountPurpose__c",
+                "referenceId": "AccountPurpose__cRef9"
+            },
+            "Account__c": "@AccountRef9",
+			"Purpose__c": "@Purpose__cRef4"
+        }
+    ]
+}

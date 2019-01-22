@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Standard will let Salesforce display the field 
+Any other type will display a custom renderer for the field --></help>
+    <label><!-- Type --></label>
+    <name>Type__c</name>
+    <picklistValues>
+        <masterLabel>Color Picker</masterLabel>
+        <translation><!-- Color Picker --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Section</masterLabel>
+        <translation><!-- Section --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Standard</masterLabel>
+        <translation><!-- Standard --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,20 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "TeamMember__c",
+                "referenceId": "TeamMember__c1"
+            },
+            "Account__c": "@AccountRef7",
+            "Contact__c": "@ContactRef6"
+        },
+        {
+            "attributes": {
+                "type": "TeamMember__c",
+                "referenceId": "TeamMember__c2"
+            },
+            "Account__c": "@AccountRef7",
+            "Contact__c": "@ContactRef1"
+        }
+    ]
+}

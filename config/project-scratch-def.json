@@ -1,0 +1,15 @@
+{
+    "orgName": "LWC Recipes",
+    "edition": "Developer",
+    "hasSampleData": "false",
+    "features": ["Communities","CustomerSelfService","Entitlements","ExternalSharing","Knowledge","PersonAccounts","LightningSalesConsole","LightningServiceConsole","ServiceCloud","Sites"],
+    "settings": {
+        "orgPreferenceSettings": {
+          "s1DesktopEnabled": true,
+          "selfSetPasswordInApi": true,
+          "s1EncryptedStoragePref2": false,
+          "networksEnabled": true,
+          "chatterEnabled": true
+        }
+    }
+}

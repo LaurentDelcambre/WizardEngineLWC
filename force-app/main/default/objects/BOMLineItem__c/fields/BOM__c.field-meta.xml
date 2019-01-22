@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BOM__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <label>Bill Of Material Header</label>
+    <referenceTo>Material__c</referenceTo>
+    <relationshipLabel>BOM Line Item (Bill Of Material Header)</relationshipLabel>
+    <relationshipName>BOMItems</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

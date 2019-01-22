@@ -1,0 +1,76 @@
+<aura:component implements="force:appHostable,force:hasRecordId,force:hasSObjectName" controller="CCL_DynamicFieldsetController">
+
+    <aura:attribute name="fieldSetName" type="String" default="FieldsGroup" description="The api name of the fieldset to use from the given object." />
+    <aura:attribute name="recordTypeId" type="String" />
+    <aura:attribute name="recordId"     type="String"  />
+    <aura:attribute name="sObjectName"  type="String"  />  
+    <aura:attribute name="reviewMode"   type="Boolean"  default="false"/>  
+    <aura:attribute name="fields"       type="Object[]" access="private" />
+	<aura:attribute name="isLoading" 	type="Boolean" default="false"/>
+
+    <aura:method name="doSubmit" action="{!c.doSubmit}" description="Calls recordEditForm submit" />
+            
+    <aura:registerEvent name="navigationEvent" type="c:CCL_PRF_NavigationEvent"/>
+
+    <!-- Late Init -->
+    <aura:handler name="init" value="{!this}" action="{!c.init}" /> 
+    <aura:handler event="force:refreshView" action="{!c.init}" />
+
+    <!-- Display Lightning Data Service errors -->
+    <aura:if isTrue="{!not(empty(v.newContactError))}">
+        <div class="recordError">
+            <ui:message title="Error" severity="error" closable="true">
+                {!v.newContactError}
+            </ui:message>
+        </div>
+    </aura:if>
+
+    <!-- Review mode -->
+    <aura:if isTrue="{!v.reviewMode}">
+			<lightning:recordViewForm recordId="{!v.recordId}" objectApiName="PRF__c">
+				<div class="slds-grid slds-wrap custom-container">
+					<aura:iteration items="{! v.fields }" var="fieldName">
+						<div class="slds-p-horizontal_small slds-size_1-of-2">
+							<lightning:outputField aura:id="fieldId" fieldName="{! fieldName }" />
+						</div>
+					</aura:iteration>
+				</div>
+			</lightning:recordViewForm>
+    </aura:if>
+
+    <!-- Edit mode -->
+    <aura:if isTrue="{!not(v.reviewMode)}">
+    	<lightning:card title="Patient Information">
+
+        <lightning:notificationsLibrary aura:id="notifLib"/>
+        <!-- Display the new contact form: no recordId attribute = NEW Record -->
+        <lightning:layout multipleRows="true">
+            <lightning:recordEditForm aura:id="recordEditForm"
+                                    objectApiName="{! v.sObjectName }"
+                                    recordTypeId="{! v.recordTypeId }"
+                                    onerror="{!c.saveError}"
+                                    onsubmit="{!c.saveSubmit}"
+                                    onsuccess="{!c.saveSuccess}"
+                                    recordId="{!v.recordId}">
+                <lightning:messages />
+
+                <aura:iteration items="{! v.fields }" var="fieldName">
+                    <lightning:layoutItem size="12" flexibility="auto" padding="around-small">
+                        <lightning:inputField aura:id="fieldId" fieldName="{! fieldName }" class="slds-p-top_small slds-m-top_medium" />
+                    </lightning:layoutItem>
+                </aura:iteration>
+
+								<lightning:layoutItem size="12" flexibility="auto" padding="around-small">
+										<lightning:button class="slds-m-top_small" variant="destructive" label="Previous" onclick="{!c.clickPrevious}"/>
+										<lightning:button class="slds-m-top_small" type="submit" variant="destructive" label="Next" />
+								</lightning:layoutItem>
+            </lightning:recordEditForm>   
+        </lightning:layout>
+		</lightning:card>
+    </aura:if>
+
+    <!-- Spinner -->
+    <aura:if isTrue="{!v.isLoading}">
+        <lightning:spinner alternativeText="Loading" />
+    </aura:if>
+</aura:component>	

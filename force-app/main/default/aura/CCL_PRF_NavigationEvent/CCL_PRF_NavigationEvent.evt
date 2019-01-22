@@ -1,0 +1,22 @@
+<aura:event type="COMPONENT" description="Event template">
+	<!-- Previous OR Next-->
+	<aura:attribute name="navigateAction"       type="String" />
+	<!-- Type of the component that initiated the event-->
+	<aura:attribute name="navigateOriginComponent"       type="String" />
+	<!-- List of CCL_WizardStep__mdt that define the Wizard steps -->
+	<aura:attribute name="listWizardSteps"      type="CCL_WizardStep__mdt[]" />
+	
+	<!-- List of cryobags of type AppointmentLineItem__c that were created -->
+	<aura:attribute name="cryobags"       type="AppointmentLineItem__c[]" />
+
+  <aura:attribute name="recordId"          		type="Id" />
+	<aura:attribute name="selectedPurposeId" 		type="Id" />
+	<aura:attribute name="selectedWizardName" 	type="String" />
+	<aura:attribute name="selectedSiteId" 			type="Id" />
+	<aura:attribute name="selectedTeamId" 	    type="Id" />
+	<aura:attribute name="selectedHCPId" 				type="Id" />
+	<aura:attribute name="selectedApheresisCenterId" 		type="Id" />
+	<aura:attribute name="selectedPickUpLocationId" 		type="Id" />
+	<aura:attribute name="selectedInfusionCenterId" 		type="Id" />
+	<aura:attribute name="selectedShipToLocationId" 		type="Id" />
+</aura:event>

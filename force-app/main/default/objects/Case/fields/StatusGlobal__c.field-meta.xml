@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>StatusGlobal__c</fullName>
+    <externalId>false</externalId>
+    <formula>TEXT(Status)&amp;' / '&amp;
+CASE(TEXT(Status)
+, 'New', TEXT(PRF_Status__c)
+, 'Plant Appointment', TEXT( Status_Plant_Appointment__c)
+, 'Apheresis Pickup', TEXT( Status_Apheresis_Pickup__c )
+, 'Apheresis Procedure', TEXT( Status_Apheresis_Procedure__c )
+, 'Cell Processing',  TEXT(Status_Cell_Processing__c)
+, 'Finished Material Delivery',  TEXT(Status_Finished_Product_Delivery__c)
+, 'Infusion', TEXT( Status_Overall_Infusion__c)
+, '')</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Status Global</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

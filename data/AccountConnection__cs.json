@@ -1,0 +1,64 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "AccountConnection__c",
+                "referenceId": "AccountConnection__cRef1"
+            },
+            "AccountFrom__c": "@AccountRef1",
+			"AccountTo__c": "@AccountRef9",
+			"Type__c" : "Infusion Centre",
+			"Status__c": "Active"
+        },
+		{
+            "attributes": {
+                "type": "AccountConnection__c",
+                "referenceId": "AccountConnection__cRef2"
+            },
+            "AccountFrom__c": "@AccountRef1",
+			"AccountTo__c": "@AccountRef10",
+			"Type__c" : "Collection Centre",
+			"Status__c": "Active"
+        },
+		{
+            "attributes": {
+                "type": "AccountConnection__c",
+                "referenceId": "AccountConnection__cRef3"
+            },
+            "AccountFrom__c": "@AccountRef10",
+			"AccountTo__c": "@AccountRef5",
+			"Type__c" : "Goods Supplier",
+			"Status__c": "Active"
+        },
+		{
+            "attributes": {
+                "type": "AccountConnection__c",
+                "referenceId": "AccountConnection__cRef4"
+            },
+            "AccountFrom__c": "@AccountRef9",
+			"AccountTo__c": "@AccountRef3",
+			"Type__c" : "Ship-To",
+			"Status__c": "Active"
+        },
+		{
+            "attributes": {
+                "type": "AccountConnection__c",
+                "referenceId": "AccountConnection__cRef5"
+            },
+            "AccountFrom__c": "@AccountRef9",
+			"AccountTo__c": "@AccountRef9",
+			"Type__c" : "Ship-To",
+			"Status__c": "Active"
+        },
+		{
+            "attributes": {
+                "type": "AccountConnection__c",
+                "referenceId": "AccountConnection__cRef6"
+            },
+            "AccountFrom__c": "@AccountRef15",
+			"AccountTo__c": "@AccountRef1",
+			"Type__c" : "Ship-To",
+			"Status__c": "Active"
+        }
+    ]
+}

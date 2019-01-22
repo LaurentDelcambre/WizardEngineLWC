@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CM_ServiceModule__c</fullName>
+    <description>2nd level Case Management</description>
+    <externalId>false</externalId>
+    <label>Case Mgt: Service Module</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>CM_SupportArea__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Site Data Management</fullName>
+                <default>false</default>
+                <label>Site Data Management</label>
+            </value>
+            <value>
+                <fullName>Product Request Processing</fullName>
+                <default>false</default>
+                <label>Product Request Processing</label>
+            </value>
+            <value>
+                <fullName>Aph Tracking</fullName>
+                <default>false</default>
+                <label>Aph Tracking</label>
+            </value>
+            <value>
+                <fullName>Cell Processing Surveillance</fullName>
+                <default>false</default>
+                <label>Cell Processing Surveillance</label>
+            </value>
+            <value>
+                <fullName>Return, Cancellation &amp; Rescheduling</fullName>
+                <default>false</default>
+                <label>Return, Cancellation &amp; Rescheduling</label>
+            </value>
+            <value>
+                <fullName>Certification Follow-Up/FAQ</fullName>
+                <default>false</default>
+                <label>Certification Follow-Up/FAQ</label>
+            </value>
+            <value>
+                <fullName>General Order Process Queries</fullName>
+                <default>false</default>
+                <label>General Order Process Queries</label>
+            </value>
+            <value>
+                <fullName>Medical Information Support</fullName>
+                <default>false</default>
+                <label>Medical Information Support</label>
+            </value>
+            <value>
+                <fullName>Coverage Approval Support</fullName>
+                <default>false</default>
+                <label>Coverage Approval Support</label>
+            </value>
+            <value>
+                <fullName>Network Investigation</fullName>
+                <default>false</default>
+                <label>Network Investigation</label>
+            </value>
+            <value>
+                <fullName>Education/Info Resources</fullName>
+                <default>false</default>
+                <label>Education/Info Resources</label>
+            </value>
+            <value>
+                <fullName>Financial Support</fullName>
+                <default>false</default>
+                <label>Financial Support</label>
+            </value>
+            <value>
+                <fullName>Travel Assistance</fullName>
+                <default>false</default>
+                <label>Travel Assistance</label>
+            </value>
+            <value>
+                <fullName>Non-Certified Site/HCP Certification Inquiries</fullName>
+                <default>false</default>
+                <label>Non-Certified Site/HCP Certification Inquiries</label>
+            </value>
+            <value>
+                <fullName>Certified Site &amp; HCP Information</fullName>
+                <default>false</default>
+                <label>Certified Site &amp; HCP Information</label>
+            </value>
+            <value>
+                <fullName>Long-Term Patient Follow-Up</fullName>
+                <default>false</default>
+                <label>Long-Term Patient Follow-Up</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Order Management</controllingFieldValue>
+            <valueName>Site Data Management</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Order Management</controllingFieldValue>
+            <valueName>Product Request Processing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Order Management</controllingFieldValue>
+            <valueName>Aph Tracking</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Order Management</controllingFieldValue>
+            <valueName>Cell Processing Surveillance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Order Management</controllingFieldValue>
+            <valueName>Return, Cancellation &amp; Rescheduling</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Certified Site / HCP Services</controllingFieldValue>
+            <valueName>Certification Follow-Up/FAQ</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Certified Site / HCP Services</controllingFieldValue>
+            <valueName>General Order Process Queries</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Certified Site / HCP Services</controllingFieldValue>
+            <valueName>Medical Information Support</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Patient Services</controllingFieldValue>
+            <valueName>Coverage Approval Support</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Patient Services</controllingFieldValue>
+            <valueName>Network Investigation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Patient Services</controllingFieldValue>
+            <valueName>Education/Info Resources</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Patient Services</controllingFieldValue>
+            <valueName>Financial Support</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Patient Services</controllingFieldValue>
+            <valueName>Travel Assistance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Referring Site Services</controllingFieldValue>
+            <valueName>Non-Certified Site/HCP Certification Inquiries</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Referring Site Services</controllingFieldValue>
+            <valueName>Certified Site &amp; HCP Information</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Referring Site Services</controllingFieldValue>
+            <valueName>Long-Term Patient Follow-Up</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

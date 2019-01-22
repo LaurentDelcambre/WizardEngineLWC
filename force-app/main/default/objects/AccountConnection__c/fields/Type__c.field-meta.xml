@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type__c</fullName>
+    <description>Specifies the type of the connection</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Specifies the type of the connection</inlineHelpText>
+    <label>Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Goods Supplier</fullName>
+                <default>false</default>
+                <label>Goods Supplier</label>
+            </value>
+            <value>
+                <fullName>Primary Vendor</fullName>
+                <default>false</default>
+                <label>Primary Vendor</label>
+            </value>
+            <value>
+                <fullName>Ship-To</fullName>
+                <default>false</default>
+                <label>Ship-To</label>
+            </value>
+            <value>
+                <fullName>Collection Centre</fullName>
+                <default>false</default>
+                <label>Collection Centre</label>
+            </value>
+            <value>
+                <fullName>Infusion Centre</fullName>
+                <default>false</default>
+                <label>Infusion Centre</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

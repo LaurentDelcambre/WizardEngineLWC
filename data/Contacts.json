@@ -1,0 +1,136 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "Contact",
+                "referenceId": "ContactRef1"
+            },
+            "AccountId": "@AccountRef1",
+            "Email": "a.schweitzer@cancer.nyu.edu",
+            "FirstName": "Albert",
+            "LastName": "Schweizer",
+            "Phone": "23456789",
+            "Salutation": "Mr."
+        },
+        {
+            "attributes": {
+                "type": "Contact",
+                "referenceId": "ContactRef2"
+            },
+            "AccountId": "@AccountRef1",
+            "FirstName": "Max",
+            "LastName": "Goldschmidt",
+            "Salutation": "Mr."
+        },
+        {
+            "attributes": {
+                "type": "Contact",
+                "referenceId": "ContactRef3"
+            },
+            "AccountId": "@AccountRef1",
+            "Email": "t.sigourney@cancer.nyu.edu",
+            "FirstName": "Sigourney",
+            "LastName": "Trask",
+            "MailingCity": "New York",
+            "MailingCountry": "United States",
+            "MailingPostalCode": "11201",
+            "MailingState": "NY",
+            "MailingStreet": "High Street",
+            "Phone": "+1 987 9877",
+            "Salutation": "Mrs."
+        },
+        {
+            "attributes": {
+                "type": "Contact",
+                "referenceId": "ContactRef4"
+            },
+            "AccountId": "@AccountRef1",
+            "Email": "a.preston@cancer.nyu.edu",
+            "FirstName": "Ann",
+            "LastName": "Preston",
+            "MailingCity": "New York",
+            "MailingCountry": "United States",
+            "MailingPostalCode": "11201",
+            "MailingState": "NY",
+            "MailingStreet": "High Street 1",
+            "Phone": "+1 987 9876",
+            "Salutation": "Ms."
+        },
+        {
+            "attributes": {
+                "type": "Contact",
+                "referenceId": "ContactRef5"
+            },
+            "AccountId": "@AccountRef1",
+            "Email": "david_p.nugent@novartis.com",
+            "FirstName": "Patient",
+            "LastName": "Li",
+            "Salutation": "Mr."
+        },
+        {
+            "attributes": {
+                "type": "Contact",
+                "referenceId": "ContactRef6"
+            },
+            "AccountId": "@AccountRef1",
+            "Email": "d.hippocrates@cancer.nyu.edu",
+            "FirstName": "Dimitry",
+            "LastName": "Hippocrates",
+            "MailingCity": "East Hanover",
+            "MailingCountry": "United States",
+            "MailingState": "NJ",
+            "MailingStreet": "1 Health Plaza",
+            "Phone": "12345678",
+            "Salutation": "Mr."
+        },
+        {
+            "attributes": {
+                "type": "Contact",
+                "referenceId": "ContactRef7"
+            },
+            "AccountId": "@AccountRef4",
+            "FirstName": "Robert",
+            "LastName": "Koch (EXT)",
+            "Salutation": "Mr."
+        },
+        {
+            "attributes": {
+                "type": "Contact",
+                "referenceId": "ContactRef8"
+            },
+            "AccountId": "@AccountRef10",
+            "Email": "aph3@fresenius-ext.com",
+            "LastName": "APH EXT 3"
+        },
+        {
+            "attributes": {
+                "type": "Contact",
+                "referenceId": "ContactRef9"
+            },
+            "AccountId": "@AccountRef10",
+            "Email": "aph1@fresenius-ext.com",
+            "LastName": "APH EXT 1"
+        },
+        {
+            "attributes": {
+                "type": "Contact",
+                "referenceId": "ContactRef10"
+            },
+            "AccountId": "@AccountRef10",
+            "Email": "aph2@fresenius-ext.com",
+            "LastName": "APH EXT 2"
+        },
+        {
+            "attributes": {
+                "type": "Contact",
+                "referenceId": "ContactRef12"
+            },
+            "AccountId": "@AccountRef18",
+            "Email": "sly.st@gmoul.com",
+            "FirstName": "Sly",
+            "LastName": "Stone",
+            "Phone": "+1 987 9864",
+            "Salutation": "Dr."
+        }
+    ]
+}

@@ -1,0 +1,42 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes,flexipage:availableForAllPageTypes" access="global">
+  <aura:attribute name="Cases" type="List"/>
+  <aura:attribute name="HCPS" type="List"/>
+  <aura:attribute name="Purposes" type="List"/>
+  <aura:registerEvent name="filteredCasesEvent" type="c:DEMO_Filter"/>
+  <aura:registerEvent name="resetFilter" type="c:DEMO_ResetFilter"/>
+
+  <div class="slds-p-horizontal_large slds-m-bottom_large">
+    <div class="slds-grid slds-wrap slds-box slds-box_small">
+      <div class="slds-size_8-of-12 slds-p-horizontal_medium slds-grid slds-wrap">
+        <div class="slds-size_1-of-1">
+          <lightning:select aura:id="hcp" name="hcp" label="" onchange="">
+            <option value="">All HCPs</option>
+            <aura:iteration items="{!v.HCPS}" var="HCP">
+              <option value="{!HCP.Id}">{!HCP.Name}</option>
+            </aura:iteration>
+          </lightning:select>
+        </div>
+        <div class="slds-size_1-of-1">
+          <lightning:select aura:id="purpose" name="purpose" label="" onchange="">
+            <option value="">All Purposes</option>
+            <aura:iteration items="{!v.Purposes}" var="Purpose">
+              <option value="{!Purpose.Id}">{!Purpose.Name}</option>
+            </aura:iteration>
+          </lightning:select>
+        </div>
+        <div class="slds-size_1-of-1" style="margin-bottom: 12px">
+          <lightning:select aura:id="priority" name="priority" label="" onchange="">
+            <option value="">Any Priority</option>
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+          </lightning:select>
+        </div>
+      </div>
+      <div class="filterButton slds-size_4-of-12 slds-grid slds-wrap slds-m-bottom_small" style="margin-top: auto">
+        <lightning:button class="slds-size_5-of-12 slds-m-right_medium" variant="neutral" label="Clear" onclick="{! c.clear }"/>
+        <lightning:button class="slds-size_5-of-12" variant="brand" label="Refine" onclick="{! c.filterResults }"/>
+      </div>
+    </div>
+  </div>
+</aura:component>

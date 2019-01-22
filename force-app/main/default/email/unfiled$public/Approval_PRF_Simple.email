@@ -1,0 +1,13 @@
+Dear {!Receiving_User.Name},
+Requesting User {!User.Name} has requested your approval for the following item.
+To approve or reject this item, reply to this email with the word APPROVE, APPROVED, YES, REJECT, REJECTED, or NO in the first line of the email message, or click this link:
+
+https://demox--icellchain.lightning.force.com/one/one.app?source=alohaHeader#/sObject/{!Case.Id}
+
+If replying via email you can also add comments on the second line. The comments will be stored with the approval request in Salesforce CRM.
+
+Note: For salesforce.com to process your response the word APPROVE, APPROVED, YES, REJECT, REJECTED, or NO must be in the very first line of the reply email. Also, any comment must be in the second line.
+
+Thank you.
+
+Novartis CCL Admin Team

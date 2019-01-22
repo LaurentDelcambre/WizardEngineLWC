@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>New</fullName>
+        <default>true</default>
+        <label>New</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Plant Appointment</fullName>
+        <default>false</default>
+        <label>Plant Appointment</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Apheresis Procedure</fullName>
+        <default>false</default>
+        <label>Apheresis</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Apheresis Pickup</fullName>
+        <default>false</default>
+        <label>Pickup</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Cell Processing</fullName>
+        <default>false</default>
+        <label>Cell Process</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Finished Material Delivery</fullName>
+        <default>false</default>
+        <label>Finished Material Delivery</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Infusion</fullName>
+        <default>false</default>
+        <label>Infusion</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>In Progress</fullName>
+        <default>false</default>
+        <label>In Progress</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>On Hold</fullName>
+        <default>false</default>
+        <label>On Hold</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Escalated</fullName>
+        <default>false</default>
+        <label>Escalated</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Closed</fullName>
+        <default>false</default>
+        <label>Closed</label>
+        <closed>true</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Completed</fullName>
+        <default>false</default>
+        <label>Completed</label>
+        <closed>true</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Cancelled</fullName>
+        <default>false</default>
+        <label>Cancelled</label>
+        <closed>false</closed>
+    </standardValue>
+</StandardValueSet>

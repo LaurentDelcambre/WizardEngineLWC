@@ -1,0 +1,17 @@
+.THIS .slds-table th {
+  text-align: center;
+  font-weight: 200;
+  background-color: rgb(250, 250, 249);
+  padding: 5px;
+}
+.THIS .slds-table td {
+  text-align: center;
+}
+.THIS span.slds-truncate {
+  font-weight: 600 !important;
+  font-size: 12px !important;
+}
+.THIS .float{
+  float: right;
+  margin-bottom: 10px;
+}

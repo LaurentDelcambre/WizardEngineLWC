@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account__c</fullName>
+    <description>Site the case should be linked to</description>
+    <externalId>false</externalId>
+    <label>Site</label>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Linked Cases</relationshipLabel>
+    <relationshipName>CaseSites</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

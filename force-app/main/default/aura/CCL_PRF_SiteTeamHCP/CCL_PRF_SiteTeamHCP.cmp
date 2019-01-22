@@ -1,0 +1,91 @@
+<aura:component controller="CCL_PRFController" implements="force:appHostable,forceCommunity:availableForAllPageTypes" access="global">
+
+  <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+  <aura:registerEvent name="navigationEvent" type="c:CCL_PRF_NavigationEvent"/>
+
+	<aura:attribute name="reviewMode" type="Boolean" default="false"/>
+
+	<aura:attribute name="recordId" type="Id" />
+
+	<aura:attribute name="labels" type="String[]" access="private"/>
+
+	<aura:attribute name="selectedPurposeId" type="Id"/>
+	<aura:attribute name="selectedWizardName" type="String"/>
+	<aura:attribute name="sites" type="List"/>
+	<aura:attribute name="selectedSiteId" type="Id"/>
+	<aura:attribute name="teams" type="List"/>
+	<aura:attribute name="selectedTeamId" type="Id"/>
+	<aura:attribute name="HCPs" type="List"/>
+	<aura:attribute name="selectedHCPId" type="Id"/>
+
+
+		<!-- Review mode -->
+		<aura:if isTrue="{!v.reviewMode}">
+				<lightning:recordViewForm recordId="{!v.recordId}" objectApiName="PRF__c">
+					<div class="slds-grid slds-wrap custom-container">
+						<div class="slds-p-horizontal_small slds-size_1-of-2">
+							<lightning:outputField fieldName="Site__c" />
+						</div>
+						<div class="slds-p-horizontal_small slds-size_1-of-2">
+							<lightning:outputField fieldName="Team__c" />
+						</div>
+						<div class="slds-p-horizontal_small slds-size_1-of-2">
+							<lightning:outputField fieldName="HCP__c" />
+						</div>
+					</div>
+				</lightning:recordViewForm>
+		</aura:if>
+
+		<!-- Edit mode -->
+		<aura:if isTrue="{!not(v.reviewMode)}">
+			<!-- Site -->
+			<lightning:layoutItem size="12">
+				<div class="slds-p-horizontal_small">
+					<p class="slds-text-heading_small">
+							<lightning:select aura:id="selectSite" name="selectSite" label="{!v.labels[0]}"
+									value="{!v.selectedSiteId}" onchange="{!c.filterTeams}" required="true" messageWhenValueMissing="Please enter a Site" >
+									<option value="">Choose a Site</option>
+									<aura:iteration items="{!v.sites}" var="site">
+											<option value="{!site.Id}" selected="{!site.Id == v.selectedSiteId}">{!site.Name}</option>
+									</aura:iteration>
+							</lightning:select>
+						
+					</p>
+				</div>
+			</lightning:layoutItem>
+			<!-- Team -->
+			<lightning:layoutItem size="12">
+					<div class="slds-p-horizontal_small">
+							<p class="slds-text-heading_small">
+					<lightning:select aura:id="selectTeam" name="selectTeam" label="{!v.labels[1]}"
+						disabled="true" value="{!v.selectedTeamId}" onchange="{!c.filterHCPs}" required="true" messageWhenValueMissing="Please enter a Team">
+									<option value="">Choose a Team</option>
+											<aura:iteration items="{!v.teams}" var="team">
+													<option value="{!team.Id}" selected="{!team.Id == v.selectedTeamId}">{!team.Name}</option>
+											</aura:iteration>
+									</lightning:select>
+							</p>
+					</div>
+			</lightning:layoutItem>
+			<!-- HCP -->
+			<lightning:layoutItem size="12">
+					<div class="slds-p-horizontal_small">
+							<p class="slds-text-heading_small">
+									<lightning:select aura:id="selectHCP" name="selectHCP" label="{!v.labels[2]}"
+											disabled="true" value="{!v.selectedHCPId}" required="true" messageWhenValueMissing="Please enter a HCP">
+									<option value="">Choose a HCP</option>
+											<aura:iteration items="{!v.HCPs}" var="HCP">
+													<option value="{!HCP.Id}" selected="{!HCP.Id == v.selectedHCPId}">{!HCP.Name}</option>
+											</aura:iteration>
+									</lightning:select>
+							</p>
+					</div>
+			</lightning:layoutItem>
+
+			<lightning:layoutItem size="12" flexibility="auto" padding="around-small">
+					<lightning:button class="slds-m-top_small" variant="destructive" label="Previous" onclick="{!c.clickPrevious}"/>
+					<lightning:button class="slds-m-top_small" type="submit" label="Next" onclick="{!c.clickNext}"/>
+			</lightning:layoutItem>
+
+		</aura:if>
+</aura:component>
