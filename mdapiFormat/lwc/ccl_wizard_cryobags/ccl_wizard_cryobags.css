@@ -1,0 +1,21 @@
+.myButton{
+    margin-right: 5px;
+    margin-top: 5px;
+}
+.myTH{
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: .75rem;
+    line-height: 1.25;
+    color: #3e3e3c;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: .0625rem;
+    background-color: #fafaf9;
+    color: #514f4d;
+    padding: .25rem .5rem;
+    font-weight: 700;
+    line-height: normal;
+}

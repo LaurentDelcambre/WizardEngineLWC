@@ -5,7 +5,7 @@
     <changePasswordTemplate>unfiled$public/CommunityChangePasswordEmailTemplate</changePasswordTemplate>
     <communityRoles/>
     <disableReputationRecordConversations>false</disableReputationRecordConversations>
-    <emailSenderAddress>cosheaz@salesforce.com</emailSenderAddress>
+    <emailSenderAddress>laurent.delcambre@novartis.com</emailSenderAddress>
     <emailSenderName>Novartis Community</emailSenderName>
     <enableCustomVFErrorPageOverrides>false</enableCustomVFErrorPageOverrides>
     <enableDirectMessages>true</enableDirectMessages>
@@ -13,6 +13,7 @@
     <enableGuestFileAccess>true</enableGuestFileAccess>
     <enableInvitation>false</enableInvitation>
     <enableKnowledgeable>true</enableKnowledgeable>
+    <enableMemberVisibility>true</enableMemberVisibility>
     <enableNicknameDisplay>false</enableNicknameDisplay>
     <enablePrivateMessages>false</enablePrivateMessages>
     <enableReputation>true</enableReputation>
@@ -41,14 +42,10 @@
         </navigationMenuItem>
     </navigationLinkSet>
     <networkMemberGroups>
-        <profile>admin</profile>
-        <profile>standard</profile>
-        <profile>marketingprofile</profile>
-        <profile>solutionmanager</profile>
-        <profile>standardaul</profile>
-        <profile>contractmanager</profile>
-        <profile>readonly</profile>
+        <profile>Admin</profile>
         <profile>customer community user</profile>
+        <profile>standardaul</profile>
+        <profile>customer community plus user</profile>
     </networkMemberGroups>
     <networkPageOverrides>
         <changePasswordPageOverrideSetting>Standard</changePasswordPageOverrideSetting>
@@ -92,11 +89,19 @@
     </reputationLevels>
     <reputationPointsRules>
         <pointsRule>
-            <eventType>FeedItemSomeoneSharesYourPost</eventType>
+            <eventType>FeedItemMentionSomeone</eventType>
+            <points>1</points>
+        </pointsRule>
+        <pointsRule>
+            <eventType>FeedItemWriteAPost</eventType>
+            <points>1</points>
+        </pointsRule>
+        <pointsRule>
+            <eventType>FeedItemReceiveAnAnswer</eventType>
             <points>5</points>
         </pointsRule>
         <pointsRule>
-            <eventType>FeedItemReceiveALike</eventType>
+            <eventType>FeedItemSomeoneSharesYourPost</eventType>
             <points>5</points>
         </pointsRule>
         <pointsRule>
@@ -104,7 +109,23 @@
             <points>5</points>
         </pointsRule>
         <pointsRule>
-            <eventType>FeedItemReceiveAnAnswer</eventType>
+            <eventType>FeedItemReceiveALike</eventType>
+            <points>5</points>
+        </pointsRule>
+        <pointsRule>
+            <eventType>EndorseSomeoneForKnowledgeOnATopic</eventType>
+            <points>5</points>
+        </pointsRule>
+        <pointsRule>
+            <eventType>FeedItemLikeSomething</eventType>
+            <points>1</points>
+        </pointsRule>
+        <pointsRule>
+            <eventType>FeedItemReceiveAMention</eventType>
+            <points>5</points>
+        </pointsRule>
+        <pointsRule>
+            <eventType>FeedItemMarkAnswerAsBest</eventType>
             <points>5</points>
         </pointsRule>
         <pointsRule>
@@ -112,27 +133,7 @@
             <points>20</points>
         </pointsRule>
         <pointsRule>
-            <eventType>FeedItemLikeSomething</eventType>
-            <points>1</points>
-        </pointsRule>
-        <pointsRule>
-            <eventType>EndorsedForKnowledgeOnATopic</eventType>
-            <points>20</points>
-        </pointsRule>
-        <pointsRule>
-            <eventType>FeedItemReceiveAMention</eventType>
-            <points>5</points>
-        </pointsRule>
-        <pointsRule>
-            <eventType>FeedItemPostQuestion</eventType>
-            <points>1</points>
-        </pointsRule>
-        <pointsRule>
-            <eventType>FeedItemMarkAnswerAsBest</eventType>
-            <points>5</points>
-        </pointsRule>
-        <pointsRule>
-            <eventType>FeedItemMentionSomeone</eventType>
+            <eventType>FeedItemShareAPost</eventType>
             <points>1</points>
         </pointsRule>
         <pointsRule>
@@ -140,20 +141,16 @@
             <points>5</points>
         </pointsRule>
         <pointsRule>
-            <eventType>FeedItemWriteAPost</eventType>
-            <points>1</points>
+            <eventType>EndorsedForKnowledgeOnATopic</eventType>
+            <points>20</points>
         </pointsRule>
         <pointsRule>
             <eventType>FeedItemWriteAComment</eventType>
             <points>1</points>
         </pointsRule>
         <pointsRule>
-            <eventType>FeedItemShareAPost</eventType>
+            <eventType>FeedItemPostQuestion</eventType>
             <points>1</points>
-        </pointsRule>
-        <pointsRule>
-            <eventType>EndorseSomeoneForKnowledgeOnATopic</eventType>
-            <points>5</points>
         </pointsRule>
     </reputationPointsRules>
     <selfRegistration>false</selfRegistration>

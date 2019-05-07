@@ -1,9 +1,17 @@
 <aura:component implements="forceCommunity:availableForAllPageTypes,flexipage:availableForAllPageTypes" access="global">
-   <aura:registerEvent name="hideModalEvent" type="c:DEMO_HideModalEvent"/>
+    <aura:attribute name="selectedRecordId" type="String"/>
+    <aura:attribute name="prfId" type="String"/>
+    <aura:attribute name="wizardType" type="String"/>
+    <aura:attribute name="objectName" type="String"/>
+    <aura:attribute name="isDisplayEngine" type="Boolean" default="false"/>
+    <aura:registerEvent name="hideModalEvent" type="c:DEMO_HideModalEvent"/>
 
-  <div class="demo-only" style="height: 640px;">
+    <!-- Force reRender of the LWC -->
+    <aura:method name="forceRerender" action="{!c.forceRerender}" description="Force reRender of the LWC" />
+
+  <div class="demo-only" style="min-height: 640px">
     <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open slds-modal_large">
-      <div class="slds-modal__container">
+      <div class="slds-modal__container" style="min-width:800px;max-width: 1000px;">
         <header class="slds-modal__header">
           <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick="{!c.hideModal}">
             <lightning:icon iconName="utility:close" size="medium" alternativeText="Close"/>
@@ -11,7 +19,14 @@
           </button>
         </header>
         <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
-          <c:CCL_PRF /> 
+          <!-- Aura version
+            <c:CCL_PRF />
+            -->
+            <!-- PRF: LWC version-->
+            <aura:if isTrue="{!v.isDisplayEngine}">
+                <c:ccl_wizardEngine selectedRecordId="{!v.selectedRecordId}" wizardType="{!v.wizardType}" objectName="{!v.objectName}" prfId="{!v.prfId}"></c:ccl_wizardEngine>
+            </aura:if>
+            <!--<c:CCL_LabelManager selectedRecordId="{!v.selectedRecordId}" />-->
         </div>
       </div>
     </section>

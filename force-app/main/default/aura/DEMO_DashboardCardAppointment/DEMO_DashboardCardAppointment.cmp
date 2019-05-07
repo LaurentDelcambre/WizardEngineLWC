@@ -1,0 +1,46 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes,flexipage:availableForAllPageTypes" access="global" controller="DashboardController">
+  <aura:attribute name="appointment" type="Object"/>
+  <aura:attribute name="Action" type="String"/>
+  <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+
+  <aura:registerEvent name="selectRecordEvent" type="c:DEMO_SelectRecordEvent"/>
+  <aura:registerEvent name="createADFEvent" type="c:DEMO_CreateADF"/>
+
+  <div class="slds-p-horizontal_large slds-p-bottom_large">
+  <div class="slds-grid slds-wrap slds-box">
+    <div class="slds-grid slds-grid_align-spread slds-size_1-of-1">
+      <div class="slds-size_1-of-2 slds-text-heading_large slds-m-vertical_medium link" style="cursor: pointer" onclick="{!c.goToAppointmentRecord}">
+        {!v.appointment.AppointmentDate__c} - {!v.appointment.Id}
+      </div>
+      <!-- <div aura:id="requestStatus" class="slds-p-around_small slds-text-heading_small slds-size_1-of-8 requestStatus" onclick="{!c.createADF}">
+        {!v.Action}
+      </div> -->
+    </div>
+    <div class="slds-grid slds-wrap slds-size_1-of-1 slds-m-vertical_medium">
+
+        <!-- lightning:ui:outputText class="slds-size_1-of-4" type="text" label="PATIENT NAME" value="{!v.appointment.Patient__r.FirstName__c + ' ' + v.appointment.Patient__r.LastName__c}" readonly="true"/ -->
+      <lightning:input class="slds-size_1-of-4" type="text" label="PATIENT NAME" value="no" readonly="true"/>
+      <lightning:input class="slds-size_1-of-4" type="text" label="DATE OF BIRTH" value="no" readonly="true"/>
+      <lightning:input class="slds-size_1-of-4" type="text" label="BATCH ID" value="no" readonly="true"/>
+      <lightning:input class="slds-size_1-of-4" type="text" label="REQUEST SUBMITTED" value="{!v.appointment.ADF_Status__c}" readonly="true"/>
+    </div>
+    <div aura:id="order" class="slds-size_1-of-4 pathElementBeginning slds-grid slds-wrap slds-text-align_center slds-p-around_medium ">
+      <div class="slds-size_1-of-1 slds-text-heading_medium">ORDER</div>
+      <div class="slds-size_1-of-1 slds-text-body_regular slds-m-top_small">{!v.appointment.ADF_Status__c}</div>
+    </div>
+    <div aura:id="apheresis" class="slds-size_1-of-4 pathElement slds-grid slds-wrap slds-text-align_center slds-p-around_medium">
+      <div class="slds-size_1-of-1 slds-text-heading_medium">APHERESIS</div>
+      <div class="slds-size_1-of-1 slds-text-body_regular slds-m-top_small">{!v.appointment.Status_Apheresis_Procedure__c}</div>
+    </div>
+    <div aura:id="manufacturing" class="slds-size_1-of-4 pathElement slds-grid slds-wrap slds-text-align_center slds-p-around_medium">
+      <div class="slds-size_1-of-1 slds-text-heading_medium">MANUFACTURING</div>
+      <div class="slds-size_1-of-1 slds-text-body_regular slds-m-top_small">{!v.appointment.Status_Apheresis_Pickup__c}</div>
+    </div>
+    <div aura:id="delivery" class="slds-size_1-of-4 pathElement slds-grid slds-wrap slds-text-align_center slds-p-around_medium">
+      <div class="slds-size_1-of-1 slds-text-heading_medium">DELIVERY</div>
+      <div class="slds-size_1-of-1 slds-text-body_regular slds-m-top_small">{!v.appointment.Status_Finished_Product_Delivery__c}</div>
+    </div>
+  </div>
+</div>
+</aura:component>

@@ -51,7 +51,7 @@
         // Setup of paramteres
         let parameters = {
             "aura:id": "dynamicFieldSetCmp",
-            "sObjectName": objectName,
+            "objectName": objectName,
             "selectedWizardStepId": selectedWizardStepId,
             "onnavigationEvent": component.getReference("c.handleNavigationEvent")
         }

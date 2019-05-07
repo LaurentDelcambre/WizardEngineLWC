@@ -42,6 +42,11 @@
                 <default>false</default>
                 <label>PRF_END</label>
             </value>
+            <value>
+                <fullName>PRF_Scheduling</fullName>
+                <default>false</default>
+                <label>PRF_Scheduling</label>
+            </value>
         </valueSetDefinition>
     </valueSet>
 </CustomField>

@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Translations xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customLabels>
+        <label><!-- ADF Step 2 --></label>
+        <name>ADF_Step_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ADF_US_Step1 --></label>
+        <name>ADF_US_Step1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CCL_Wizard --></label>
+        <name>CCL_Wizard</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- KymriahCommercial_EU_END --></label>
+        <name>KymriahCommercial_EU_END</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- KymriahCommercial_EU_Logistics --></label>
+        <name>KymriahCommercial_EU_Logistics</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- KymriahCommercial_EU_Order --></label>
+        <name>KymriahCommercial_EU_Order</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- KymriahCommercial_EU_Patient --></label>
+        <name>KymriahCommercial_EU_Patient</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- KymriahCommercial_EU_Patient_Extended_Attributes --></label>
+        <name>KymriahCommercial_EU_Patient_Extended_Attributes</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- KymriahCommercial_EU_Start --></label>
+        <name>KymriahCommercial_EU_Start</name>
+    </customLabels>
+    <customLabels>
+        <label>ADF Apheresis Appointment Summary</label>
+        <name>ccl_engine_ADF_Apheresis_Appointment_Summary</name>
+    </customLabels>
+    <customLabels>
+        <label>ADF Apheresis Appointment Summary</label>
+        <name>ccl_engine_ADF_Apheresis_Appointment_Summary_section</name>
+    </customLabels>
+    <customLabels>
+        <label>ADF Cryobags</label>
+        <name>ccl_engine_ADF_Cryobags</name>
+    </customLabels>
+    <customLabels>
+        <label>Provide ADF Cryobag information</label>
+        <name>ccl_engine_ADF_Cryobags_section</name>
+    </customLabels>
+    <customLabels>
+        <label>ADF Final Step</label>
+        <name>ccl_engine_ADF_Final_Step</name>
+    </customLabels>
+    <customLabels>
+        <label>Review your selected values and submit for approval</label>
+        <name>ccl_engine_ADF_Final_Step_section</name>
+    </customLabels>
+    <customLabels>
+        <label>ADF Shipment Details</label>
+        <name>ccl_engine_ADF_Shipment_Details</name>
+    </customLabels>
+    <customLabels>
+        <label>Complete ADF shipment details</label>
+        <name>ccl_engine_ADF_Shipment_Details_section</name>
+    </customLabels>
+    <customLabels>
+        <label>ADF Treatment Summary</label>
+        <name>ccl_engine_ADF_Treatment_Summary</name>
+    </customLabels>
+    <customLabels>
+        <label>Please provide the Treatment information</label>
+        <name>ccl_engine_ADF_Treatment_Summary_section</name>
+    </customLabels>
+    <customLabels>
+        <label>Logistics</label>
+        <name>ccl_engine_PRF_logistics</name>
+    </customLabels>
+    <customLabels>
+        <label>Please select the sites for Apheresis, Infusion and logistics</label>
+        <name>ccl_engine_PRF_logistics_section</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ccl_engine_PRF_order --></label>
+        <name>ccl_engine_PRF_order</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ccl_engine_PRF_order_section --></label>
+        <name>ccl_engine_PRF_order_section</name>
+    </customLabels>
+    <customLabels>
+        <label>Patient Information</label>
+        <name>ccl_engine_PRF_patient</name>
+    </customLabels>
+    <customLabels>
+        <label>Complete patient details and consent</label>
+        <name>ccl_engine_PRF_patient_section</name>
+    </customLabels>
+    <customLabels>
+        <label>Purpose selection</label>
+        <name>ccl_engine_PRF_purpose</name>
+    </customLabels>
+    <customLabels>
+        <label>Please select the Purpose and Wizard</label>
+        <name>ccl_engine_PRF_purpose_section</name>
+    </customLabels>
+    <customLabels>
+        <label>Scheduling</label>
+        <name>ccl_engine_PRF_scheduling</name>
+    </customLabels>
+    <customLabels>
+        <label>Please select the leukapheresis Shipment Date</label>
+        <name>ccl_engine_PRF_scheduling_section</name>
+    </customLabels>
+    <customLabels>
+        <label>Treatment Center/HCP</label>
+        <name>ccl_engine_PRF_site</name>
+    </customLabels>
+    <customLabels>
+        <label>Select Kymriah Commercial EU Treatment Center, Team and HCP</label>
+        <name>ccl_engine_PRF_site_section</name>
+    </customLabels>
+    <customLabels>
+        <label>Review and Submit</label>
+        <name>ccl_engine_PRF_submit</name>
+    </customLabels>
+    <customLabels>
+        <label>Review your selected values and submit for approval</label>
+        <name>ccl_engine_PRF_submit_section</name>
+    </customLabels>
+    <customLabels>
+        <label>ADF Cryobags</label>
+        <name>ccl_wizard_adfCryobags</name>
+    </customLabels>
+    <customLabels>
+        <label>Apheresis Center</label>
+        <name>ccl_wizard_aphCenter</name>
+    </customLabels>
+    <customLabels>
+        <label>Approval Status</label>
+        <name>ccl_wizard_approvalStatus</name>
+    </customLabels>
+    <customLabels>
+        <label>Approve</label>
+        <name>ccl_wizard_approve</name>
+    </customLabels>
+    <customLabels>
+        <label>Approver</label>
+        <name>ccl_wizard_approver</name>
+    </customLabels>
+    <customLabels>
+        <label>HCP</label>
+        <name>ccl_wizard_hcp</name>
+    </customLabels>
+    <customLabels>
+        <label>Infusion Center</label>
+        <name>ccl_wizard_infusionCenter</name>
+    </customLabels>
+    <customLabels>
+        <label>Estimated Leukapheresis Shipment Date </label>
+        <name>ccl_wizard_leukapheresisShipmentDate</name>
+    </customLabels>
+    <customLabels>
+        <label>Next</label>
+        <name>ccl_wizard_next</name>
+    </customLabels>
+    <customLabels>
+        <label>Order New Treatment</label>
+        <name>ccl_wizard_orderTreatment</name>
+    </customLabels>
+    <customLabels>
+        <label>Pickup Location</label>
+        <name>ccl_wizard_pickupLocation</name>
+    </customLabels>
+    <customLabels>
+        <label>Previous</label>
+        <name>ccl_wizard_previous</name>
+    </customLabels>
+    <customLabels>
+        <label>PRF Scheduling</label>
+        <name>ccl_wizard_prfScheduling</name>
+    </customLabels>
+    <customLabels>
+        <label>Purpose</label>
+        <name>ccl_wizard_purposeLabel</name>
+    </customLabels>
+    <customLabels>
+        <label>Reject</label>
+        <name>ccl_wizard_reject</name>
+    </customLabels>
+    <customLabels>
+        <label>Ship-to Location</label>
+        <name>ccl_wizard_shiptoLocation</name>
+    </customLabels>
+    <customLabels>
+        <label>Submit for review</label>
+        <name>ccl_wizard_submit</name>
+    </customLabels>
+    <customLabels>
+        <label>Team</label>
+        <name>ccl_wizard_team</name>
+    </customLabels>
+    <customLabels>
+        <label>Request Forms</label>
+        <name>ccl_wizard_title</name>
+    </customLabels>
+    <customLabels>
+        <label>Treatment Center</label>
+        <name>ccl_wizard_treatmentCenter</name>
+    </customLabels>
+    <customLabels>
+        <label>Wizard</label>
+        <name>ccl_wizard_wizard</name>
+    </customLabels>
+    <quickActions>
+        <label><!-- LogACall --></label>
+        <name>LogACall</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewAccount --></label>
+        <name>NewAccount</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewCase --></label>
+        <name>NewCase</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewContact --></label>
+        <name>NewContact</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewEvent --></label>
+        <name>NewEvent</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewGroup --></label>
+        <name>NewGroup</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewLead --></label>
+        <name>NewLead</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewNote --></label>
+        <name>NewNote</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewOpportunity --></label>
+        <name>NewOpportunity</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewTask --></label>
+        <name>NewTask</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- SendEmail --></label>
+        <name>SendEmail</name>
+    </quickActions>
+</Translations>

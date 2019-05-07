@@ -1,0 +1,13 @@
+.myButton{
+    margin-right: 5px;
+    margin-top: 5px;
+}
+.d-header{
+    font-size: 1em!important;
+}
+.calendar{
+    width:400px;
+    height: 350px;
+    margin-left: 30px;
+    font-size: 1em!important;
+}

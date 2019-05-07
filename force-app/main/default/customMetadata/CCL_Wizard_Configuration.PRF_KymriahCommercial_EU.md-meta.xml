@@ -3,6 +3,14 @@
     <label>PRF KymriahCommercial EU</label>
     <protected>false</protected>
     <values>
+        <field>Object_Name__c</field>
+        <value xsi:type="xsd:string">Case</value>
+    </values>
+    <values>
+        <field>Record_Type_Id__c</field>
+        <value xsi:type="xsd:string">0128E000000AAlYQAW</value>
+    </values>
+    <values>
         <field>Title__c</field>
         <value xsi:type="xsd:string">Standard Commercial PRF Wizard for Kymriah in EU</value>
     </values>

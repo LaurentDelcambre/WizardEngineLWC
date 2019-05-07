@@ -25,6 +25,16 @@
         <default>false</default>
         <label>Cancelled</label>
     </customValue>
+    <customValue>
+        <fullName>Submit</fullName>
+        <default>false</default>
+        <label>Submit</label>
+    </customValue>
+    <customValue>
+        <fullName>Approve</fullName>
+        <default>false</default>
+        <label>Approve</label>
+    </customValue>
     <masterLabel>Approval Status</masterLabel>
     <sorted>false</sorted>
 </GlobalValueSet>

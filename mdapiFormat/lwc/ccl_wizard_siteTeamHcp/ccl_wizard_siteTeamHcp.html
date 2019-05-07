@@ -1,0 +1,87 @@
+<template>
+    <!-- Edit mode -->
+	<template if:false={reviewMode}>
+        <!-- Error Handling -->
+        <template if:true={error}>
+            <c-error-panel errors={error}></c-error-panel>
+        </template>
+
+        <div class="myCard">
+
+		<!-- Site -->
+		<lightning-layout-item size="12">
+			<div class="slds-p-horizontal_small">
+				<p class="slds-text-heading_small">
+                     <lightning-combobox
+                        name="selectSite"
+                        label={staticLabels.ccl_wizard_treatmentCenter}
+                        value={selectedSiteId}
+                        onchange={filterTeams}
+                        options={availableSites}
+                        disabled={isSiteDisabled}
+                        required
+                        class="combo">
+                    </lightning-combobox>
+				</p>
+			</div>
+		</lightning-layout-item>
+		<!-- Team -->
+		<lightning-layout-item size="12">
+				<div class="slds-p-horizontal_small">
+						<p class="slds-text-heading_small">
+                            <lightning-combobox
+                                name="selectTeam"
+                                label={staticLabels.ccl_wizard_team}
+                                value={selectedTeamId}
+                                onchange={filterHcps}
+                                options={availableTeams}
+                                disabled={isTeamDisabled}
+                                class="combo">
+                            </lightning-combobox>
+						</p>
+				</div>
+		</lightning-layout-item>
+		<!-- HCP -->
+		<lightning-layout-item size="12">
+				<div class="slds-p-horizontal_small">
+						<p class="slds-text-heading_small">
+                            <lightning-combobox
+                                name="selectHcp"
+                                label={staticLabels.ccl_wizard_hcp}
+                                value={selectedHcpId}
+                                onchange={handleHcpSelect}
+                                options={availableHcps}
+                                disabled={isHcpDisabled}
+                                required
+                                class="combo">
+                            </lightning-combobox>
+						</p>
+				</div>
+		</lightning-layout-item>
+
+        <br />
+            <div class="marginButtons">
+                <lightning-button class="slds-m-top_small slds-m-right_small" variant="destructive" label={staticLabels.ccl_wizard_previous} onclick={clickPrevious}></lightning-button>
+                <lightning-button class="slds-m-top_small" type="submit" label={staticLabels.ccl_wizard_next} disabled={isInvalid} onclick={clickNext}></lightning-button>
+            </div>
+        </div>
+
+	</template>
+
+	<!-- Review mode -->
+	<template if:true={reviewMode}>
+        <lightning-record-view-form record-id={recordId} object-api-name={objectName}>
+            <div class="slds-grid slds-wrap custom-container">
+                <div class="slds-p-horizontal_small slds-size_1-of-2">
+                    <lightning-output-field field-name="Site__c"></lightning-output-field>
+                </div>
+                <div class="slds-p-horizontal_small slds-size_1-of-2">
+                    <lightning-output-field field-name="Team__c"></lightning-output-field>
+                </div>
+                <div class="slds-p-horizontal_small slds-size_1-of-2">
+                    <lightning-output-field field-name="HCP__c"></lightning-output-field>
+                </div>
+            </div>
+        </lightning-record-view-form>
+    </template>
+</template>

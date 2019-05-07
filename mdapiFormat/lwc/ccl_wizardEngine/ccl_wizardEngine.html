@@ -1,0 +1,123 @@
+<template>
+	<div class="c-container">
+		<lightning-card icon-name="standard:account" title={engineTitle}>
+			<lightning-layout multiple-rows="true">
+
+                <!-- Progress Bar-->
+				<template if:true={isProgressIndicatorDisplayed}>
+                    <lightning-layout-item size="12" flexibility="auto" padding="around-small">
+                        <c-ccl_wizard_progress-indicator steps={indicatorSteps} title={wizardTitle} current-step={currentStepString}></c-ccl_wizard_progress-indicator>
+                    </lightning-layout-item>
+				</template>
+
+				<!-- Placeholder for the Section Description -->
+				<lightning-layout-item size="12" flexibility="auto" padding="around-small">
+					<div class="slds-summary-detail__content myCard">{sectionDescription}</div>
+				</lightning-layout-item>
+
+				<!-- Purpose Selector-->
+				<template if:true={isPurposeCmpDisplayed}>
+                    <c-ccl_wizard_purpose-selector
+                        review-mode={isReviewMode}
+                        wizard-type={wizardType}
+                        selected-purpose-id={selectedPurposeId}
+                        selected-wizard-name={selectedWizardName}
+                        object-name={objectName}
+                        onnavigation={handleNavigationEvent}></c-ccl_wizard_purpose-selector>
+                </template>
+
+                <!-- PRF Step 1: Site, Team, HCP-->
+				<template if:true={isSiteCmpDisplayed}>
+                    <c-ccl_wizard_site-team-hcp
+                        review-mode={isReviewMode}
+                    	selected-purpose-id={selectedPurposeId}
+						selected-wizard-name={selectedWizardName}
+						selected-site-id={selectedSiteId}
+						selected-team-id={selectedTeamId}
+                        selected-hcp-id={selectedHcpId}
+                        onnavigation={handleNavigationEvent}></c-ccl_wizard_site-team-hcp>
+                </template>
+
+                <!-- Logistics Component-->
+				<template if:true={isLogisticsDisplayed}>
+                    <c-ccl_wizard_logistics
+                        review-mode={isReviewMode}
+                        record-id={recordId}
+                        selected-purpose-id={selectedPurposeId}
+                        selected-site-id={selectedSiteId}
+                        selected-apheresis-center-id={selectedApheresisCenterId}
+                        selected-pickup-location-id={selectedPickUpLocationId}
+                        selected-infusion-center-id={selectedInfusionCenterId}
+                        selected-shipto-location-id={selectedShipToLocationId}
+                        onnavigation={handleNavigationEvent} ></c-ccl_wizard_logistics>
+                </template>
+
+                <!-- Dynamic Form -->
+				<template if:true={isDynamicFormDisplayed}>
+                    <c-ccl_dynamic_form
+                        data-name="dynamic"
+                        record-id={recordId}
+                        object-name={stepToDisplay.ObjectType__c}
+                        record-type-id={recordTypeId}
+                    	selected-purpose-id={selectedPurposeId}
+						selected-wizard-name={selectedWizardName}
+                        selected-prf-id={selectedPrfId}
+                        selected-wizard-step-id={stepToDisplay.Id}
+						selected-site-id={selectedSiteId}
+						selected-team-id={selectedTeamId}
+                        selected-hcp-id={selectedHcpId}
+                        selected-apheresis-center-id={selectedApheresisCenterId}
+                        selected-pickup-location-id={selectedPickUpLocationId}
+                        selected-infusion-center-id={selectedInfusionCenterId}
+                        selected-shipto-location-id={selectedShipToLocationId}
+                        onnavigation={handleNavigationEvent} ></c-ccl_dynamic_form>
+				</template>
+
+
+
+                <!-- Review and Submit component-->
+				<template if:true={isReviewSubmitDisplayed}>
+                    <c-ccl_wizard_review-submit
+                        record-id={recordId}
+                        object-name={objectName}
+                        input-record-status={recordStatus}
+                        selected-purpose-id={selectedPurposeId}
+                        selected-wizard-name={selectedWizardName}
+                        selected-site-id={selectedSiteId}
+                        selected-team-id={selectedTeamId}
+                        selected-hcp-id={selectedHcpId}
+                        selected-apheresis-center-id={selectedApheresisCenterId}
+                        selected-pickup-location-id={selectedPickUpLocationId}
+                        selected-infusion-center-id={selectedInfusionCenterId}
+                        selected-shipto-location-id={selectedShipToLocationId}
+						list-wizard-steps={listWizardSteps}
+						cryobags={cryobags}
+                        onnavigation={handleNavigationEvent} ></c-ccl_wizard_review-submit>
+				</template>
+
+                <!-- Cryobags component-->
+				<template if:true={isCryobagsDisplayed}>
+                    <c-ccl_wizard_cryobags
+                        record-id={recordId}
+                        cryobags={cryobags}
+                        selected-purpose-id={selectedPurposeId}
+                        onnavigation={handleNavigationEvent}  ></c-ccl_wizard_cryobags>
+                </template>
+
+                <!-- Calendar component-->
+				<template if:true={isSchedulingDisplayed}>
+                    <c-ccl_wizard_calendar
+                        record-id={recordId}
+                        onnavigation={handleNavigationEvent}></c-ccl_wizard_calendar>
+				</template>
+
+				<template if:true={isLoading}>
+					<lightning-spinner alternative-text="Loading"></lightning-spinner>
+				</template>
+
+
+
+			</lightning-layout>
+		</lightning-card>
+	</div>
+</template>

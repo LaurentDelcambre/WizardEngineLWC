@@ -60,7 +60,7 @@ public with sharing class CCL_PRFController {
 		}
 	}
 
-  @AuraEnabled
+    @AuraEnabled
 	public static SitesAndLabel filterSitesByPurpose(String purposeId) {
 		//Getting field label
 		Map<String, Schema.SObjectField> fieldsMap = Schema.getGlobalDescribe().get('PRF__C').getDescribe().fields.getMap();

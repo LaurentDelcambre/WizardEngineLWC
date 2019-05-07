@@ -7,7 +7,7 @@
             },
             "Name": "PRF_KymriahCommercial_EU",
             "Type__c": "PRF_Wizard",
-            "Purpose__c": "@Purpose__cRef4"
+            "Purpose__c": "@Purpose__cRef1"
         },
 		{
             "attributes": {
@@ -16,7 +16,7 @@
             },
             "Name": "ADF_KymriahCommercial_US",
             "Type__c": "ADF_Wizard",
-            "Purpose__c": "@Purpose__cRef4"
+            "Purpose__c": "@Purpose__cRef1"
         },
 		{
             "attributes": {
@@ -25,7 +25,7 @@
             },
             "Name": "PRF_KymriahCommercial_DE",
             "Type__c": "PRF_Wizard",
-            "Purpose__c": "@Purpose__cRef1"
+            "Purpose__c": "@Purpose__cRef4"
         }
     ]
 }

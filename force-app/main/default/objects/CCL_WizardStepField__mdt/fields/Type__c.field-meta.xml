@@ -29,6 +29,11 @@ Any other type will display a custom renderer for the field</inlineHelpText>
                 <default>false</default>
                 <label>Section</label>
             </value>
+            <value>
+                <fullName>Date of birth</fullName>
+                <default>false</default>
+                <label>Date of birth</label>
+            </value>
         </valueSetDefinition>
     </valueSet>
 </CustomField>

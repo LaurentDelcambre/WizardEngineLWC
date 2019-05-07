@@ -1,0 +1,52 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "MaterialPurpose__c",
+                "referenceId": "MaterialPurpose__cRef1"
+            },
+            "Material__c": "@Material__cRef1",
+            "Purpose__c": "@Purpose__cRef1"
+        },
+        {
+            "attributes": {
+                "type": "MaterialPurpose__c",
+                "referenceId": "MaterialPurpose__cRef2"
+            },
+            "Material__c": "@Material__cRef2",
+            "Purpose__c": "@Purpose__cRef1"
+        },
+        {
+            "attributes": {
+                "type": "MaterialPurpose__c",
+                "referenceId": "MaterialPurpose__cRef3"
+            },
+            "Material__c": "@Material__cRef3",
+            "Purpose__c": "@Purpose__cRef1"
+        },
+        {
+            "attributes": {
+                "type": "MaterialPurpose__c",
+                "referenceId": "MaterialPurpose__cRef4"
+            },
+            "Material__c": "@Material__cRef4",
+            "Purpose__c": "@Purpose__cRef1"
+        },
+        {
+            "attributes": {
+                "type": "MaterialPurpose__c",
+                "referenceId": "MaterialPurpose__cRef5"
+            },
+            "Material__c": "@Material__cRef5",
+            "Purpose__c": "@Purpose__cRef1"
+        },
+        {
+            "attributes": {
+                "type": "MaterialPurpose__c",
+                "referenceId": "MaterialPurpose__cRef6"
+            },
+            "Material__c": "@Material__cRef6",
+            "Purpose__c": "@Purpose__cRef1"
+        }
+    ]
+}

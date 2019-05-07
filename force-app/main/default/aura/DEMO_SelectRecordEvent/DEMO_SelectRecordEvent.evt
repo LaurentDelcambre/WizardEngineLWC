@@ -1,0 +1,6 @@
+<aura:event type="COMPONENT" description="Event template">
+    <aura:attribute name="recordId" type="String"/>
+    <aura:attribute name="prfId" type="String"/>
+    <aura:attribute name="objectName" type="String"/>
+    <aura:attribute name="wizardType" type="String"/>
+</aura:event>

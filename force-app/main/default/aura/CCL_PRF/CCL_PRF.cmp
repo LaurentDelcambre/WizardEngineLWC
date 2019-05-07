@@ -26,18 +26,18 @@
 	<aura:attribute name="selectedSiteId" 			type="Id" access="private" />
 	<aura:attribute name="selectedTeamId" 			type="Id" access="private" />
 	<aura:attribute name="selectedHCPId" 				type="Id" access="private" />
-	
+
 	<aura:attribute name="selectedApheresisCenterId" 		type="Id" access="private" />
 	<aura:attribute name="selectedPickUpLocationId" 		type="Id" access="private" />
 	<aura:attribute name="selectedInfusionCenterId" 		type="Id" access="private" />
 	<aura:attribute name="selectedShipToLocationId" 		type="Id" access="private" />
-	
+
 	<aura:attribute name="progressIndicator"	 	type="Aura.Component" />
 	<aura:attribute name="dynamicFieldSetCmp" 	type="Aura.Component" />
 
   <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
 	<aura:handler name="navigationEvent" event="c:CCL_PRF_NavigationEvent" action="{!c.handleNavigationEvent}"/>
-	
+
 	<div class="c-container">
 		<lightning:card iconName="standard:account" title="Product Request Form" >
 			<lightning:layout multipleRows="true">
@@ -56,14 +56,14 @@
 
 				<!-- Purpose Selector-->
 				<aura:if isTrue="{!v.isPurposeCmpDisplayed}">
-					<c:CCL_PRF_PurposeSelector reviewMode="false" 
+					<c:CCL_PRF_PurposeSelector reviewMode="false"
 						selectedPurposeId="{!v.selectedPurposeId}"
 						selectedWizardName="{!v.selectedWizardName}"/>
 				</aura:if>
 
 				<!-- PRF Step 1: Site, Team, HCP-->
 				<aura:if isTrue="{!v.isSiteCmpDisplayed}">
-					<c:CCL_PRF_SiteTeamHCP reviewMode="false" 
+					<c:CCL_PRF_SiteTeamHCP reviewMode="false"
 						selectedPurposeId="{!v.selectedPurposeId}"
 						selectedWizardName="{!v.selectedWizardName}"
 						selectedSiteId="{!v.selectedSiteId}"
@@ -71,13 +71,13 @@
 						selectedHCPId="{!v.selectedHCPId}"/>
 				</aura:if>
 
-				<!-- OLD 
+				<!-- OLD
 				<aura:if isTrue="{!v.isPatientCmpDisplayed}">
 						recordId={!v.recordId}
 					<aura:iteration items="{!v.patientFieldSets}" var="fieldsetName" indexVar="patientIndex">
 						<aura:if isTrue="{!patientIndex == v.currentPatientIndex}">
-							<c:CCL_DynamicFieldset aura:id="dyna" recordId="{!v.recordId}" 
-													sObjectName="PRF__c" 
+							<c:CCL_DynamicFieldset aura:id="dyna" recordId="{!v.recordId}"
+													sObjectName="PRF__c"
 													fieldSetName="{!fieldsetName}" />
 						</aura:if>
 					</aura:iteration>
@@ -91,11 +91,11 @@
 
 				<!-- Logistics Component-->
 				<aura:if isTrue="{!v.isLogisticsDisplayed}">
-					<c:CCL_PRF_Logistics aura:id="logisticstCmp" 
+					<c:CCL_PRF_Logistics aura:id="logisticstCmp"
 						reviewMode="false"
-						selectedPurposeId="{!v.selectedPurposeId}" 
+						selectedPurposeId="{!v.selectedPurposeId}"
 						selectedSiteId="{!v.selectedSiteId}"
-						recordId="{!v.recordId}" 
+						recordId="{!v.recordId}"
 						selectedApheresisCenterId="{!v.selectedApheresisCenterId}"
 						selectedPickUpLocationId="{!v.selectedPickUpLocationId}"
 						selectedInfusionCenterId="{!v.selectedInfusionCenterId}"
@@ -104,8 +104,8 @@
 
 				<!-- Review adn Submit component-->
 				<aura:if isTrue="{!v.isReviewSubmitDisplayed}">
-					<c:CCL_PRF_ReviewSubmit aura:id="reviewSubmitCmp" 
-						recordId="{!v.recordId}"  
+					<c:CCL_PRF_ReviewSubmit aura:id="reviewSubmitCmp"
+						recordId="{!v.recordId}"
 						selectedWizardName="{!v.selectedWizardName}"
 						selectedPurposeId="{!v.selectedPurposeId}"
 						selectedSiteId="{!v.selectedSiteId}"
@@ -127,7 +127,7 @@
 				<aura:if isTrue="{!v.isLoading}">
 					<lightning:spinner alternativeText="Loading" />
 				</aura:if>
-      </lightning:layout>
-		</lightning:card>
+        </lightning:layout>
+	</lightning:card>
   </div>
 </aura:component>

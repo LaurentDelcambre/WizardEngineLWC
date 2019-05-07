@@ -1,0 +1,131 @@
+<template>
+
+    <!-- Error Handling -->
+    <template if:true={errors}>
+        <c-error-panel errors={errors}></c-error-panel>
+    </template>
+
+    <!-- Status -->
+    <lightning-layout-item size="12" flexibility="auto" padding="around-small">
+        <h3 class="slds-section-title_divider slds-has-divider_bottom">{staticLabels.ccl_wizard_approvalStatus}</h3>
+        <span class="slds-p-horizontal_small">{recordStatus}</span>
+    </lightning-layout-item>
+
+    <!-- Purpose and Wizard -->
+    <lightning-layout-item size="12" flexibility="auto" padding="around-small">
+        <h3 class="slds-section-title_divider slds-has-divider_bottom">{staticLabels.ccl_wizard_purposeLabel}</h3>
+        <c-ccl_wizard_purpose-selector
+                    record-id={recordId}
+                    object-name={objectName}
+                    review-mode></c-ccl_wizard_purpose-selector>
+    </lightning-layout-item>
+
+    <template for:each={listWizardStepsWithGetter} for:item="stepContainer" for:index="index">
+        <!-- Site Team HCP-->
+        <template if:true={stepContainer.isPrfStart}>
+            <lightning-layout-item size="12" flexibility="auto" padding="around-small" key={stepContainer.step.id}>
+                <h3 class="slds-section-title_divider slds-has-divider_bottom">{stepContainer.step.Label}</h3>
+                <c-ccl_wizard_site-team-hcp
+                        record-id={recordId}
+                        object-name={objectName}
+                        review-mode></c-ccl_wizard_site-team-hcp>
+            </lightning-layout-item>
+        </template>
+
+        <!-- Dynamic Form -->
+        <template if:true={stepContainer.isFieldset}>
+            <lightning-layout-item size="12" flexibility="auto" padding="around-small" key={stepContainer.step.id}>
+                <h3 class="slds-section-title_divider slds-has-divider_bottom">{stepContainer.step.Label}</h3>
+                <c-ccl_dynamic_form
+                    record-id={recordId}
+                    object-name={stepContainer.step.ObjectType__c}
+                    selected-wizard-step-id={stepContainer.step.Id}
+                    review-mode></c-ccl_dynamic_form>
+            </lightning-layout-item>
+        </template>
+
+        <!-- Logistics -->
+        <template if:true={stepContainer.isPrfLogistics}>
+            <lightning-layout-item size="12" flexibility="auto" padding="around-small" key={stepContainer.step.id}>
+                <h3 class="slds-section-title_divider slds-has-divider_bottom">{stepContainer.step.Label}</h3>
+
+                <c-ccl_wizard_logistics
+                    record-id={recordId}
+                    object-name={objectName}
+                    review-mode></c-ccl_wizard_logistics>
+                </lightning-layout-item>
+        </template>
+
+        <!-- ADF Cryobags -->
+        <template if:true={stepContainer.isAdfCryobags}>
+            <lightning-layout-item size="12" flexibility="auto" padding="around-small" key={stepContainer.step.id}>
+                <h3 class="slds-section-title_divider slds-has-divider_bottom">{staticLabels.ccl_wizard_adfCryobags}</h3>
+                <c-ccl_wizard_cryobags
+                        record-id={recordId}
+                        object-name={objectName}
+                        cryobags={cryobags}
+                        review-mode></c-ccl_wizard_cryobags>
+            </lightning-layout-item>
+        </template>
+
+        <!-- PRF Scheduling -->
+        <template if:true={stepContainer.isPrfScheduling}>
+            <lightning-layout-item size="12" flexibility="auto" padding="around-small" key={stepContainer.step.id}>
+                <h3 class="slds-section-title_divider slds-has-divider_bottom">{staticLabels.ccl_wizard_prfScheduling}</h3>
+                <c-ccl_wizard_calendar
+                        record-id={recordId}
+                        object-name={objectName}
+                        field-name={stepContainer.step.Field_name__c}
+                        review-mode></c-ccl_wizard_calendar>
+            </lightning-layout-item>
+        </template>
+    </template>
+
+    <br />
+    <div class="slds-m-top_small slds-p-horizontal_small">
+
+
+        <!-- Submit for Approval -->
+        <template if:true={displaySubmitButton}>
+
+            <!-- Approver -->
+		    <lightning-layout-item size="12">
+                <div class="slds-p-horizontal_small">
+                    <p class="slds-text-heading_small">
+                         <lightning-combobox
+                            name="selectApprover"
+                            label={staticLabels.ccl_wizard_approver}
+                            value={selectedApproverId}
+                            onchange={selectApprover}
+                            options={availableApprovers}
+                            required
+                            class="combo">
+                        </lightning-combobox>
+                    </p>
+                </div>
+            </lightning-layout-item>
+            <br />
+            <lightning-button class="slds-m-top_small myButton" variant="destructive" label={staticLabels.ccl_wizard_previous} onclick={clickPrevious}></lightning-button>
+            <lightning-button class="slds-m-top_small myButton" type="submit" label={staticLabels.ccl_wizard_submit} onclick={submitForApproval} ></lightning-button>
+        </template>
+
+        <!-- Approve/Reject -->
+        <template if:true={displayApproveRejectButtons}>
+            <lightning-record-edit-form object-api-name={objectName}
+                record-id={recordId}
+                onsuccess={success}
+                data-field="recordForm">
+                <lightning-input-field data-field="PRF_Status__c" field-name="PRF_Status__c" value="Reject" class="slds-hide"></lightning-input-field>
+                <lightning-input-field data-field="ADF_Status__c" field-name="ADF_Status__c" value="Reject" class="slds-hide"></lightning-input-field>
+                <lightning-input-field field-name="Approver_Comments__c" ></lightning-input-field>
+            </lightning-record-edit-form>
+            <lightning-button class="slds-m-top_small myButton" type="submit" label={staticLabels.ccl_wizard_reject} onclick={reject}></lightning-button>
+            <lightning-button class="slds-m-top_small myButton" type="submit" label={staticLabels.ccl_wizard_approve} onclick={approve}></lightning-button>
+        </template>
+
+        <!-- Document link -->
+        <template if:true={displayDocumentLink}>
+            <lightning-button class="slds-m-top_small myButton" type="submit" label="View ADF Document" onclick={navigateToFiles2}></lightning-button>
+        </template>
+    </div>
+</template>

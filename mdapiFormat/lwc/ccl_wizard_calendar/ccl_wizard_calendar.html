@@ -1,0 +1,41 @@
+<template>
+    <template if:false={reviewMode}>
+        <lightning-layout  multiple-rows="true">
+            <lightning-layout-item size="8">
+                <div style="background:#ffffff;" class="slds-grid">
+                    <!-- This is where the calendar gets loaded. -->
+                    <!-- We'll use the class name "fullcalendarjs" as our dom target instead of the ID -->
+                    <!-- In LWC, the id can changed dynamically -->
+                    <div id="calendar" class="fullcalendarjs" lwc:dom="manual"></div>
+                </div>
+                <div class="calendar" lwc:dom="manual"></div>
+                <!--
+                <div class="slds-m-around_medium">
+                    <input type="text" class="date-picker" lwc:dom="manual"></input>
+                </div>-->
+            </lightning-layout-item>
+            <lightning-layout-item size="4">
+                <div class="slds-m-around_medium slds-p-around_medium">
+                    <span class="slds-form-element__label">{staticLabels.ccl_wizard_leukapheresisShipmentDate}:</span>
+                    <div class="selection">{formattedDate}</div>
+                </div>
+            </lightning-layout-item>
+
+            <br />
+            <div class="slds-m-top_small slds-p-horizontal_small">
+                <lightning-button class="slds-m-top_small myButton" variant="destructive" label={staticLabels.ccl_wizard_previous} onclick={clickPrevious}></lightning-button>
+                <lightning-button class="slds-m-top_small myButton" type="submit" label={staticLabels.ccl_wizard_next} onclick={clickNext}></lightning-button>
+            </div>
+        </lightning-layout>
+    </template>
+    <template if:true={reviewMode}>
+        <lightning-layout-item size="12">
+            <span class="slds-form-element__label slds-p-horizontal_small">{staticLabels.ccl_wizard_leukapheresisShipmentDate}:</span>
+            <lightning-formatted-date-time
+                value={returnedDate}
+                year="numeric"
+                month="short"
+                day="2-digit"></lightning-formatted-date-time>
+        </lightning-layout-item>
+    </template>
+</template>

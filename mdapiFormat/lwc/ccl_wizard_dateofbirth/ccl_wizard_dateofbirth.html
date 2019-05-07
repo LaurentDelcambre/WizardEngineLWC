@@ -1,0 +1,28 @@
+<template>
+    <template if:false={reviewMode}>
+        <div class="slds-grid slds-m-top_x-small">
+            <div class="slds-col slds-size_1-of-3 slds-p-right_x-small">
+                <lightning-input name="day"     label="Day"     onchange={handleChange} value="01"></lightning-input>
+            </div>
+            <div class="slds-col slds-size_1-of-3 slds-p-right_x-small">
+                <lightning-combobox
+                    name="month"
+                    label="Month"
+                    placeholder="Select Month"
+                    options={monthOptions}
+                    onchange={handleChange} ></lightning-combobox>
+            </div>
+            <div class="slds-col slds-size_1-of-3">
+                <lightning-input name="year"   label="Year"   onchange={handleChange} value="2019"></lightning-input>
+            </div>
+        </div>
+    </template>
+    <template if:true={reviewMode}>
+        <span class="slds-form-element__label">Date of birth:</span>
+        <lightning-formatted-date-time
+            value={returnedDate}
+            year="numeric"
+            month="short"
+            day="2-digit"></lightning-formatted-date-time>
+    </template>
+</template>

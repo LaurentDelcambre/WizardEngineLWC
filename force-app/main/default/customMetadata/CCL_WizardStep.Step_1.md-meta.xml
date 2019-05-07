@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-    <label>Step 1</label>
+    <label>ccl_engine_PRF_site</label>
     <protected>false</protected>
     <values>
         <field>Active__c</field>
@@ -15,6 +15,10 @@
         <value xsi:nil="true"/>
     </values>
     <values>
+        <field>Field_name__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
         <field>ObjectType__c</field>
         <value xsi:nil="true"/>
     </values>
@@ -24,7 +28,7 @@
     </values>
     <values>
         <field>SectionDescription__c</field>
-        <value xsi:type="xsd:string">KymriahCommercial_EU_Start</value>
+        <value xsi:type="xsd:string">ccl_engine_PRF_site_section</value>
     </values>
     <values>
         <field>WizardConfiguration__c</field>

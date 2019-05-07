@@ -2,19 +2,26 @@
   <aura:attribute name="Case" type="Object"/>
   <aura:attribute name="Action" type="String"/>
   <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+
+  <aura:registerEvent name="selectRecordEvent" type="c:DEMO_SelectRecordEvent"/>
+  <aura:registerEvent name="createADFEvent" type="c:DEMO_CreateADF"/>
+
   <div class="slds-p-horizontal_large slds-p-bottom_large">
   <div class="slds-grid slds-wrap slds-box">
     <div class="slds-grid slds-grid_align-spread slds-size_1-of-1">
       <div class="slds-size_1-of-2 slds-text-heading_large slds-m-vertical_medium link" style="cursor: pointer" onclick="{!c.goToRecord}">
         {!v.Case.CaseNumber} - {!v.Case.Subject}
       </div>
-      <div aura:id="requestStatus" class="slds-p-around_small slds-text-heading_small slds-size_1-of-8 requestStatus" onclick="{!c.submitDraft}">
+      <div aura:id="requestStatus" class="slds-p-around_small slds-text-heading_small slds-size_1-of-8 requestStatus" onclick="{!c.createADF}">
         {!v.Action}
       </div>
     </div>
     <div class="slds-grid slds-wrap slds-size_1-of-1 slds-m-vertical_medium">
-      <lightning:input class="slds-size_1-of-4" type="text" label="PATIENT NAME" value="{!v.Case.Patient__r.FirstName__c + ' ' + v.Case.Patient__r.LastName__c}" readonly="true"/>
-      <lightning:input class="slds-size_1-of-4" type="date" label="DATE OF BIRTH" value="{!v.Case.Patient__r.DateOfBirth__c}" readonly="true"/>
+
+        <!-- lightning:ui:outputText class="slds-size_1-of-4" type="text" label="PATIENT NAME" value="{!v.Case.Patient__r.FirstName__c + ' ' + v.Case.Patient__r.LastName__c}" readonly="true"/ -->
+      <lightning:input class="slds-size_1-of-4" type="text" label="PATIENT NAME" value="{!v.Case.DEMOPatientNamecalc__c}" readonly="true"/>
+      <lightning:input class="slds-size_1-of-4" type="text" label="DATE OF BIRTH" value="{!v.Case.DEMO_Patient_DOB_NVS__c}" readonly="true"/>
       <lightning:input class="slds-size_1-of-4" type="text" label="BATCH ID" value="{!v.Case.GroupBatchNumber__c}" readonly="true"/>
       <lightning:input class="slds-size_1-of-4" type="text" label="REQUEST SUBMITTED" value="{!v.Case.PRF_Status__c}" readonly="true"/>
     </div>

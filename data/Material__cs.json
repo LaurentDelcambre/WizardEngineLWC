@@ -1,0 +1,70 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "Material__c",
+                "referenceId": "Material__cRef1"
+            },
+            "Name": "APH DLBCL",
+            "MaterialNumber__c": "",
+            "Status__c": "Active",
+            "Type__c": "APH",
+            "UnitOfMeasure__c": "NC/Kg"
+        },
+        {
+            "attributes": {
+                "type": "Material__c",
+                "referenceId": "Material__cRef2"
+            },
+            "Name": "FP2 DLBCL",
+            "MaterialNumber__c": "FP_002",
+            "Status__c": "Active",
+            "Type__c": "FP2",
+            "UnitOfMeasure__c": "NC/Kg"
+        },
+        {
+            "attributes": {
+                "type": "Material__c",
+                "referenceId": "Material__cRef3"
+            },
+            "Name": "FP3 DLBCL",
+            "MaterialNumber__c": "FP_003",
+            "Status__c": "Active",
+            "Type__c": "FP3",
+            "UnitOfMeasure__c": "NC/Kg"
+        },
+        {
+            "attributes": {
+                "type": "Material__c",
+                "referenceId": "Material__cRef4"
+            },
+            "Name": "PP 2 DLBCL",
+            "MaterialNumber__c": "PP_002",
+            "Status__c": "Active",
+            "Type__c": "PP2",
+            "UnitOfMeasure__c": "NC/Kg"
+        },
+        {
+            "attributes": {
+                "type": "Material__c",
+                "referenceId": "Material__cRef5"
+            },
+            "Name": "PP 1 DLBCL",
+            "MaterialNumber__c": "PP_001",
+            "Status__c": "Active",
+            "Type__c": "PP1",
+            "UnitOfMeasure__c": "NC/Kg"
+        },
+        {
+            "attributes": {
+                "type": "Material__c",
+                "referenceId": "Material__cRef6"
+            },
+            "Name": "FP1 DLBCL",
+            "MaterialNumber__c": "FP_001",
+            "Status__c": "Active",
+            "Type__c": "FP1",
+            "UnitOfMeasure__c": "NC/Kg"
+        }
+    ]
+}

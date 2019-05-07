@@ -1,0 +1,15 @@
+<aura:component controller="CCL_WizardEngineController">
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="isInitDone" type="Boolean" default="false" />
+    <aura:attribute name="labels" type="String[]" />
+    <aura:attribute name="labelValues" type="List" />
+    <aura:attribute name="selectedRecordId" type="String" />
+    <aura:attribute name="trial" type="String" />
+
+    <!-- LWC version-->
+	<aura:if isTrue="{!v.isInitDone}">
+        DEBUG:{!v.labels}:{!v.labelValues}:{!v.trial}
+        <c:ccl_wizardEngine selectedRecordId="{!v.selectedRecordId}" labels="{!v.labels}" labelValues="{!v.labelValues}"></c:ccl_wizardEngine>
+    </aura:if>
+
+</aura:component>

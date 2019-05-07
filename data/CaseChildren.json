@@ -33,7 +33,7 @@
             "Status_Overall_Treatment__c": "In Progress",
             "Status_Plant_Appointment__c": "Reserved - Approved",
             "Subject": "Treatment--5000E000006BsF9QAK",
-            "RecordTypeId": "0124E000000GxnsQAC"
+            "RecordTypeId": "0127E000000f0i4QAA"
         },
         {
             "attributes": {
@@ -64,7 +64,7 @@
             "Status_Plant_Appointment__c": "Open",
             "Subject": "Emily Rose - Kymriah",
             "Type": "Feature Request",
-            "RecordTypeId": "0124E000000GxnrQAC"
+            "RecordTypeId": "0127E000000f0i3QAA"
         }
     ]
 }

@@ -4,11 +4,15 @@
     <protected>false</protected>
     <values>
         <field>Field_Name__c</field>
-        <value xsi:type="xsd:string">LastName__c</value>
+        <value xsi:type="xsd:string">Patient_s_Last_Name__c</value>
     </values>
     <values>
         <field>Order__c</field>
         <value xsi:type="xsd:double">3.0</value>
+    </values>
+    <values>
+        <field>Required__c</field>
+        <value xsi:type="xsd:boolean">true</value>
     </values>
     <values>
         <field>Type__c</field>

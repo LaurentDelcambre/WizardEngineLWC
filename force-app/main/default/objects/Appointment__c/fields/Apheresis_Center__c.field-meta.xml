@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Apheresis_Center__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Apheresis Center</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Apheresis Center</inlineHelpText>
+    <label>Apheresis Center</label>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Appointments (Apheresis Center)</relationshipLabel>
+    <relationshipName>Appointments4</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

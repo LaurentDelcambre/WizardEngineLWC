@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Translations xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customLabels>
+        <label><!-- ADF Step 2 --></label>
+        <name>ADF_Step_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ADF_US_Step1 --></label>
+        <name>ADF_US_Step1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CCL_Wizard --></label>
+        <name>CCL_Wizard</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- KymriahCommercial_EU_END --></label>
+        <name>KymriahCommercial_EU_END</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- KymriahCommercial_EU_Logistics --></label>
+        <name>KymriahCommercial_EU_Logistics</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- KymriahCommercial_EU_Order --></label>
+        <name>KymriahCommercial_EU_Order</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- KymriahCommercial_EU_Patient --></label>
+        <name>KymriahCommercial_EU_Patient</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- KymriahCommercial_EU_Patient_Extended_Attributes --></label>
+        <name>KymriahCommercial_EU_Patient_Extended_Attributes</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- KymriahCommercial_EU_Start --></label>
+        <name>KymriahCommercial_EU_Start</name>
+    </customLabels>
+    <customLabels>
+        <label>語頭音消失指名概要</label>
+        <name>ccl_engine_ADF_Apheresis_Appointment_Summary</name>
+    </customLabels>
+    <customLabels>
+        <label>ADF語頭音消失指名概要</label>
+        <name>ccl_engine_ADF_Apheresis_Appointment_Summary_section</name>
+    </customLabels>
+    <customLabels>
+        <label>ADF低温バッグ</label>
+        <name>ccl_engine_ADF_Cryobags</name>
+    </customLabels>
+    <customLabels>
+        <label>ADF 低温バッグ情報を提供してください</label>
+        <name>ccl_engine_ADF_Cryobags_section</name>
+    </customLabels>
+    <customLabels>
+        <label>ADF最終的なステップ</label>
+        <name>ccl_engine_ADF_Final_Step</name>
+    </customLabels>
+    <customLabels>
+        <label>あなたの選ばれた価格をチェックして、承認のために降参してください</label>
+        <name>ccl_engine_ADF_Final_Step_section</name>
+    </customLabels>
+    <customLabels>
+        <label>出荷の詳細</label>
+        <name>ccl_engine_ADF_Shipment_Details</name>
+    </customLabels>
+    <customLabels>
+        <label>完全なADF出荷の詳細</label>
+        <name>ccl_engine_ADF_Shipment_Details_section</name>
+    </customLabels>
+    <customLabels>
+        <label>ADF処置概要</label>
+        <name>ccl_engine_ADF_Treatment_Summary</name>
+    </customLabels>
+    <customLabels>
+        <label>処理情報を提供してください</label>
+        <name>ccl_engine_ADF_Treatment_Summary_section</name>
+    </customLabels>
+    <customLabels>
+        <label>物流</label>
+        <name>ccl_engine_PRF_logistics</name>
+    </customLabels>
+    <customLabels>
+        <label>ApheresisとInfusionとロジスティックスの場所を選んでください</label>
+        <name>ccl_engine_PRF_logistics_section</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ccl_engine_PRF_order --></label>
+        <name>ccl_engine_PRF_order</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ccl_engine_PRF_order_section --></label>
+        <name>ccl_engine_PRF_order_section</name>
+    </customLabels>
+    <customLabels>
+        <label>忍耐強い情報</label>
+        <name>ccl_engine_PRF_patient</name>
+    </customLabels>
+    <customLabels>
+        <label>完全な患者の詳細と同意</label>
+        <name>ccl_engine_PRF_patient_section</name>
+    </customLabels>
+    <customLabels>
+        <label>目的選択</label>
+        <name>ccl_engine_PRF_purpose</name>
+    </customLabels>
+    <customLabels>
+        <label>目的とウィザードを選んでください</label>
+        <name>ccl_engine_PRF_purpose_section</name>
+    </customLabels>
+    <customLabels>
+        <label>スケジューリング</label>
+        <name>ccl_engine_PRF_scheduling</name>
+    </customLabels>
+    <customLabels>
+        <label>白語頭音消失発送日を選んでください</label>
+        <name>ccl_engine_PRF_scheduling_section</name>
+    </customLabels>
+    <customLabels>
+        <label>処置情報</label>
+        <name>ccl_engine_PRF_site</name>
+    </customLabels>
+    <customLabels>
+        <label>選ばれたKymriahコマーシャルEU処置センター、チームとHCP</label>
+        <name>ccl_engine_PRF_site_section</name>
+    </customLabels>
+    <customLabels>
+        <label>チェックして、提出してください</label>
+        <name>ccl_engine_PRF_submit</name>
+    </customLabels>
+    <customLabels>
+        <label>あなたの選ばれた価格をチェックして、承認のために降参してください</label>
+        <name>ccl_engine_PRF_submit_section</name>
+    </customLabels>
+    <customLabels>
+        <label>ADF低温バッグ </label>
+        <name>ccl_wizard_adfCryobags</name>
+    </customLabels>
+    <customLabels>
+        <label>語頭音消失センター</label>
+        <name>ccl_wizard_aphCenter</name>
+    </customLabels>
+    <customLabels>
+        <label>承認ステータス</label>
+        <name>ccl_wizard_approvalStatus</name>
+    </customLabels>
+    <customLabels>
+        <label>承認</label>
+        <name>ccl_wizard_approve</name>
+    </customLabels>
+    <customLabels>
+        <label>承認者</label>
+        <name>ccl_wizard_approver</name>
+    </customLabels>
+    <customLabels>
+        <label>先生</label>
+        <name>ccl_wizard_hcp</name>
+    </customLabels>
+    <customLabels>
+        <label>注入センター</label>
+        <name>ccl_wizard_infusionCenter</name>
+    </customLabels>
+    <customLabels>
+        <label>推定された語頭音消失発送日</label>
+        <name>ccl_wizard_leukapheresisShipmentDate</name>
+    </customLabels>
+    <customLabels>
+        <label>次</label>
+        <name>ccl_wizard_next</name>
+    </customLabels>
+    <customLabels>
+        <label>注文新しい治療</label>
+        <name>ccl_wizard_orderTreatment</name>
+    </customLabels>
+    <customLabels>
+        <label>受け取り場所</label>
+        <name>ccl_wizard_pickupLocation</name>
+    </customLabels>
+    <customLabels>
+        <label>前</label>
+        <name>ccl_wizard_previous</name>
+    </customLabels>
+    <customLabels>
+        <label>PRFスケジューリング</label>
+        <name>ccl_wizard_prfScheduling</name>
+    </customLabels>
+    <customLabels>
+        <label>目的</label>
+        <name>ccl_wizard_purposeLabel</name>
+    </customLabels>
+    <customLabels>
+        <label>拒否</label>
+        <name>ccl_wizard_reject</name>
+    </customLabels>
+    <customLabels>
+        <label>輸送場所</label>
+        <name>ccl_wizard_shiptoLocation</name>
+    </customLabels>
+    <customLabels>
+        <label>形服従</label>
+        <name>ccl_wizard_submit</name>
+    </customLabels>
+    <customLabels>
+        <label>チーム</label>
+        <name>ccl_wizard_team</name>
+    </customLabels>
+    <customLabels>
+        <label>リクエストフォーム</label>
+        <name>ccl_wizard_title</name>
+    </customLabels>
+    <customLabels>
+        <label>治療センター</label>
+        <name>ccl_wizard_treatmentCenter</name>
+    </customLabels>
+    <customLabels>
+        <label>ウィザード</label>
+        <name>ccl_wizard_wizard</name>
+    </customLabels>
+    <quickActions>
+        <label><!-- LogACall --></label>
+        <name>LogACall</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewAccount --></label>
+        <name>NewAccount</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewCase --></label>
+        <name>NewCase</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewContact --></label>
+        <name>NewContact</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewEvent --></label>
+        <name>NewEvent</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewGroup --></label>
+        <name>NewGroup</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewLead --></label>
+        <name>NewLead</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewNote --></label>
+        <name>NewNote</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewOpportunity --></label>
+        <name>NewOpportunity</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewTask --></label>
+        <name>NewTask</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- SendEmail --></label>
+        <name>SendEmail</name>
+    </quickActions>
+</Translations>

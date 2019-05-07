@@ -1,5 +1,6 @@
 <aura:component controller="DashboardController" implements="forceCommunity:availableForAllPageTypes,flexipage:availableForAllPageTypes" access="global">
-  <aura:attribute name="Cases" type="List"/>
+    <aura:attribute name="appointments" type="List"/>
+  <aura:attribute name="cases" type="List"/>
   <aura:attribute name="AllCases" type="List"/>
   <aura:attribute name="Purposes" type="List"/>
   <aura:attribute name="HCPS" type="List"/>
@@ -7,23 +8,39 @@
   <aura:handler name="filteredCasesEvent" event="c:DEMO_Filter" action="{!c.filterCases}"/>
   <aura:handler name="resetFilter" event="c:DEMO_ResetFilter" action="{!c.doInit}"/>
   <aura:handler name="hideModalEvent" event="c:DEMO_HideModalEvent" action="{!c.toggleModal}"/>
+  <!-- LD: add click on Case record opens PRF Engine-->
+  <aura:attribute name="isDisplayEngine" type="Boolean" default="false"/>
+  <aura:handler name="selectRecordEvent" event="c:DEMO_SelectRecordEvent" action="{!c.selectRecord}"/>
+  <aura:handler name="createADFEvent" event="c:DEMO_CreateADF" action="{!c.startADF}"/>
+
+  <aura:attribute name="selectedRecordId" type="String"/>
+  <aura:attribute name="prfId" type="String"/>
+  <aura:attribute name="wizardType" type="String"/>
+  <aura:attribute name="objectName" type="String"/>
 
   <div class="slds-grid slds-wrap">
+    <lightning:button class="slds-size_1-of-6 slds-p-around_small slds-m-around_large slds-text-heading_small slds-float_right" variant="brand" label="{!$Label.c.ccl_wizard_orderTreatment  }" onclick="{!c.toggleModal}"/>
     <div class="slds-size_1-of-1 slds-text-heading_large slds-p-around_large">
       Dashboard
       <p class="slds-text-heading_small">{!v.Cases.length} Treatment Requests Found</p>
     </div>
-    <lightning:button class="slds-size_1-of-6 slds-p-around_small slds-m-around_large slds-text-heading_small" variant="brand" label="Add a new request" onclick="{!c.toggleModal}"/>
     <div class="slds-size_1-of-1">
       <c:DEMO_DashboardFilter HCPS="{!v.HCPS}" Purposes="{!v.Purposes}" Cases="Cases"/>
     </div>
     <div class="slds-size_1-of-1">
-      <aura:iteration items="{!v.Cases}" var="Case">
-        <c:DEMO_DashboardCard Case="{!Case}"/>
-      </aura:iteration>
+        <!-- Wrapepr for both case and Appointment__c-->
+        <aura:iteration items="{!v.cases}" var="case">
+            <c:DEMO_DashboardCard Case="{!case }"/>
+        </aura:iteration>
+        <aura:iteration items="{!v.appointments}" var="appointment">
+            <c:DEMO_DashboardCardAppointment appointment="{!appointment }"/>
+
+        </aura:iteration>
     </div>
     <div aura:id="modal" class="slds-hide">
-      <c:DEMO_DashboardModal />
+        <aura:if isTrue="{!v.isDisplayEngine}">
+            <c:DEMO_DashboardModal aura:id="dashboardModal" selectedRecordId="{!v.selectedRecordId}" wizardType="{!v.wizardType}" objectName="{!v.objectName}" prfId="{!v.prfId}" />
+        </aura:if>
     </div>
   </div>
 </aura:component>

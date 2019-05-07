@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DEMO_Patient_DOB_NVS__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(DAY(DEMOPatientDOBcalc__c) &lt; 10,&#39;0&#39;,&#39;&#39;) 
+&amp; TEXT(DAY(DEMOPatientDOBcalc__c)) 
+&amp;&#39;-&#39;&amp; 
+CASE( 
+MONTH(DEMOPatientDOBcalc__c) 
+, 1,&#39;JAN&#39; 
+, 2,&#39;FEB&#39; 
+, 3,&#39;MAR&#39; 
+, 4,&#39;APR&#39; 
+, 5,&#39;MAY&#39; 
+, 6,&#39;JUN&#39; 
+, 7,&#39;JUL&#39; 
+, 8,&#39;AUG&#39; 
+, 9,&#39;SEP&#39; 
+, 10,&#39;OCT&#39; 
+, 11,&#39;NOV&#39; 
+, 12,&#39;DEC&#39; 
+,&#39;&#39;) 
+&amp;&#39;-&#39;&amp; 
+TEXT(YEAR(DEMOPatientDOBcalc__c))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>DEMO Patient DOB NVS</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

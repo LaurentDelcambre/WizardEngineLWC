@@ -3,6 +3,10 @@
     <label>ADF KymriahCommercial US</label>
     <protected>false</protected>
     <values>
+        <field>Object_Name__c</field>
+        <value xsi:type="xsd:string">Appointment__c</value>
+    </values>
+    <values>
         <field>Title__c</field>
         <value xsi:type="xsd:string">Standard Commercial ADF Wizard for Kymriah in US</value>
     </values>

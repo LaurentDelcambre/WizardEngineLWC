@@ -30,7 +30,7 @@
         "files": [
             "AccountConnection__cs.json"
         ]
-    },	
+    },
 	{
         "sobject": "TeamMember__c",
         "saveRefs": true,
@@ -63,7 +63,7 @@
             "PurposeTemplate__cs.json"
         ]
     },
-	{
+	  {
         "sobject": "Patient__c",
         "saveRefs": true,
         "resolveRefs": true,
@@ -71,20 +71,20 @@
             "Patient__cs.json"
         ]
     },
-    {
-        "sobject": "Case",
+	  {
+        "sobject": "Material__c",
         "saveRefs": true,
         "resolveRefs": true,
         "files": [
-            "Case.json"
+            "Material__cs.json"
         ]
     },
-    {
-        "sobject": "Case",
+	  {
+        "sobject": "MaterialPurpose__c",
         "saveRefs": true,
         "resolveRefs": true,
         "files": [
-            "CaseChildren.json"
+            "MaterialPurpose__cs.json"
         ]
     }
 ]

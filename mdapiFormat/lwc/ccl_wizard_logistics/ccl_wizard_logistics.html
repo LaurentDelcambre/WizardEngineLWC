@@ -1,0 +1,108 @@
+<template>
+    <!-- Edit mode -->
+	<template if:false={reviewMode}>
+
+        <div class="myCard">
+
+		<!-- Apheresis Center-->
+        <lightning-layout-item size="12">
+            <div class="slds-p-horizontal_small">
+                <p class="slds-text-heading_small">
+
+                    <lightning-combobox
+                        name="selectApheresisCenter"
+                        label={staticLabels.ccl_wizard_aphCenter}
+                        value={selectedApheresisCenterId}
+                        onchange={filterPickUpLocationsFromEvent}
+                        options={apheresisCenters}
+                        disabled={isApheresisDisabled}
+                        required
+                        class="combo">
+                    </lightning-combobox>
+                </p>
+            </div>
+		</lightning-layout-item>
+
+		<!-- PickUp Locations-->
+        <lightning-layout-item size="12">
+            <div class="slds-p-horizontal_small">
+                <p class="slds-text-heading_small">
+
+                    <lightning-combobox
+                        name="selectPickupLocation"
+                        label={staticLabels.ccl_wizard_pickupLocation}
+                        value={selectedPickUpLocationId}
+                        options={pickUpLocations}
+                        disabled={isPickupDisabled}
+                        required
+                        class="combo">
+                    </lightning-combobox>
+                </p>
+            </div>
+		</lightning-layout-item>
+
+		<!-- Infusion Centers-->
+        <lightning-layout-item size="12">
+            <div class="slds-p-horizontal_small">
+                <p class="slds-text-heading_small">
+
+                    <lightning-combobox
+                        name="selectedInfusionCenter"
+                        label={staticLabels.ccl_wizard_infusionCenter}
+                        value={selectedInfusionCenterId}
+                        options={infusionCenters}
+                        onchange={filterShipToLocationsFromEvent}
+                        disabled={isInfusionDisabled}
+                        required
+                        class="combo">
+                    </lightning-combobox>
+                </p>
+            </div>
+		</lightning-layout-item>
+
+		<!-- ShipTo Locations-->
+        <lightning-layout-item size="12">
+            <div class="slds-p-horizontal_small">
+                <p class="slds-text-heading_small">
+                    <lightning-combobox
+                        name="selectShipToLocation"
+                        label={staticLabels.ccl_wizard_shiptoLocation}
+                        value={selectedShipToLocationId}
+                        options={shipToLocations}
+                        onchange={handleShiptoSelect}
+                        disabled={isShiptoDisabled}
+                        required
+                        class="combo">
+                    </lightning-combobox>
+                </p>
+            </div>
+		</lightning-layout-item>
+
+        <br />
+            <div class="marginButtons">
+                <lightning-button class="slds-m-top_small slds-m-right_small" variant="destructive" label={staticLabels.ccl_wizard_previous} onclick={clickPrevious}></lightning-button>
+                <lightning-button class="slds-m-top_small" type="submit" label={staticLabels.ccl_wizard_next} disabled={isInvalid} onclick={clickNext}></lightning-button>
+            </div>
+        </div>
+    </template>
+
+    <!-- Review mode -->
+	<template if:true={reviewMode}>
+        <lightning-record-view-form record-id={recordId} object-api-name={objectName}>
+            <div class="slds-grid slds-wrap custom-container">
+                <div class="slds-p-horizontal_small slds-size_1-of-2">
+                    <lightning-output-field field-name="ApheresisCenter__c"></lightning-output-field>
+                </div>
+                <div class="slds-p-horizontal_small slds-size_1-of-2">
+                    <lightning-output-field field-name="PickupLocation__c"></lightning-output-field>
+                </div>
+                <div class="slds-p-horizontal_small slds-size_1-of-2">
+                    <lightning-output-field field-name="InfusionCenter__c"></lightning-output-field>
+                </div>
+                <div class="slds-p-horizontal_small slds-size_1-of-2">
+                    <lightning-output-field field-name="ShipToLocation__c"></lightning-output-field>
+                </div>
+            </div>
+        </lightning-record-view-form>
+	</template>
+</template>

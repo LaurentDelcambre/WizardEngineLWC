@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>InfusionCenter__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Infusion Center</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Infusion Center</inlineHelpText>
+    <label>InfusionCenter</label>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Cases (InfusionCenter)</relationshipLabel>
+    <relationshipName>Cases2</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>
